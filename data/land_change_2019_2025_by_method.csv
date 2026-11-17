@@ -1,0 +1,10 @@
+method,land_2019_2025_pct
+same-scheme (headline),125.8
+hedonic by zone,96.7
+stratified median,118.4
+plain median,47.4
+"chained matched-scheme, mean log, min count weights",139.3
+"chained matched-scheme, mean log, count weights",220.4
+"chained matched-scheme, mean log, value weights",96.8
+"chained matched-scheme, mean log, equal weights",106.7
+"chained matched-scheme, median ratios, value weights",119.4

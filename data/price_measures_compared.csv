@@ -1,0 +1,19 @@
+measure,what_it_measures,window,start_value,end_value,change_pct,note,in_pack
+PropEquity launch price,weighted average INR/sq ft of projects launched in the period,2023 -> Jan-Sep 2024,4240.0,6979.0,64.6,new launches only; mix of what launched,shown
+NHB RESIDEX HPI@Assessment,"bank valuation of mortgaged homes, index",CY2023 mean -> CY2024 mean (quarters),129.63,139.46,7.6,quarter labels are quarter-end months,shown
+NHB RESIDEX HPI@Market Price,"builders' quoted prices, under-construction",Jul-Sep 2023 y/y,,,-3.4,only the published y/y figure is available; series not saved,shown
+RBI HPI (registration-based),registered transaction prices,Q4 2023-24 (Jan-Mar 2024) y/y,,,-0.3,VERIFIED release; Q3 2023-24 +0.72% is UNVERIFIED,shown
+"DLC circle rate (median step, DLC pilot sample)","official minimum land value for stamp duty, chained index",CY2023 day-weighted mean -> CY2024,108.97,118.66,8.9,"end-2023 -> end-2024 +11.1%; residential, 2 SROs before 2026",held: see the revised findings (a chained circle-rate index is not shown)
+JDA auction land-price index (same-scheme),"auction-cleared price of JDA plots, index (other stream)",2023 -> 2024,355.4,426.0,19.9,from my working notes,shown
+Registration revenue per sale deed (IGRS),"duty, surcharge and fee collected per sale deed, INR lakh",CY2023 -> CY2024,1.426,1.483,4.0,"a ticket-size gauge, not a per-sq-ft price; moves with DLC, rates and mix",held: crosses the 2024 deed reclassification
+"Implied ticket, PropEquity value / units",INR lakh per unit sold (my arithmetic on PropEquity),2023 -> 2024,59.0,78.0,32.2,"rounded published arithmetic from my working notes (Rs 6,019 cr and Rs 8,388 cr)",not shown (rounded published arithmetic)
+NHB RESIDEX HPI@Assessment,"bank valuation, index",CY2019 mean -> CY2025 mean,105.75,146.06,38.1,,shown
+JDA auction land-price index (same-scheme),"auction-cleared land price, index",2019 -> 2025,232.8,525.6,125.8,range across the JDA stream's methods: +96.7% (hedonic) to +138.0% (excl. minimum-step auctions),shown
+NHB RESIDEX HPI@Assessment (base 2024-25),"bank valuation, index",Jun 2025 -> Jun 2026,99.92,112.44,12.5,,shown
+"NHB RESIDEX carpet price, units <=60 sq m","bank valuation, INR/sq ft carpet",Jun 2025 -> Jun 2026,4437.0,5000.0,12.7,small units only,shown
+Housing.com asking price,"average listing price, INR/sq ft",Oct 2025 -> Oct 2026,5547.0,6432.0,16.0,UNVERIFIED (portal blocked; quoted by Outlook Money); start value is my back-calculation,shown
+Square Yards asking price,"average listing price, INR/sq ft",change as shown on page (period not stated),,4950.0,0.7,period of the +0.71% not stated on the page,shown
+"DLC circle rate (median step, DLC pilot sample)",chained index,Mar 2026 -> Aug 2026 (Apr uplift + Jul revision),122.53,183.34,49.6,pilot median total 2026 rise per colony +48.6% (n=171); before 2026 the chain is in effect one office (walled city); on that office alone Mar->Aug 2026 is +30.8% (second-account review s.3.10); colony-level example removed 14 Nov 2026 (portal terms),held: see the revised findings (a chained circle-rate index is not shown)
+JDA auction land-price index (same-scheme),index (other stream),2025 -> 2026 to 10 Nov,525.6,622.5,18.4,2024 -> 2025 was +23.4%,shown
+Registration revenue per sale deed (IGRS),INR lakh per sale deed,Apr-Oct 2025 -> 2026,1.553,1.806,16.3,includes the Mar 2026 surcharge rise and the 2026 DLC revisions,shown
+RBI HPI (registration-based),registered transaction prices,Q3 2025-26 to Q1 2026-27,,,,Jaipur named as a driver of the all-India rise; no Jaipur number published in the release text,shown

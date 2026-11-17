@@ -1,0 +1,7 @@
+use,road_band,median_ratio_to_40ft,share_at_median,rows
+commercial,100ft_plus,1.2,1.0,3647
+commercial,41-60ft,1.1,1.0,3653
+commercial,61-99ft,1.15,1.0,3616
+residential,100ft_plus,1.2,1.0,3637
+residential,41-60ft,1.1,0.9994511525795828,3644
+residential,61-99ft,1.15,0.9952882483370288,3608

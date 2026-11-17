@@ -1,0 +1,33 @@
+subset,year,index_2019_100,n_auctions,boot_lo,boot_hi,boot_valid
+all land (headline),2019,100.0,228,100.0,100.0,200
+all land (headline),2020,98.8,349,87.3,108.7,200
+all land (headline),2021,99.0,880,87.3,110.3,200
+all land (headline),2022,115.5,760,99.7,132.6,200
+all land (headline),2023,152.3,859,126.3,182.4,200
+all land (headline),2024,182.4,1088,154.3,212.5,200
+all land (headline),2025,224.9,454,185.2,267.8,200
+all land (headline),2026,266.6,338,218.6,315.9,200
+residential house plots (no group housing),2019,100.0,128,100.0,100.0,200
+residential house plots (no group housing),2020,103.1,196,90.3,110.6,200
+residential house plots (no group housing),2021,106.0,506,92.7,118.3,200
+residential house plots (no group housing),2022,123.5,376,106.8,145.8,200
+residential house plots (no group housing),2023,152.8,437,124.5,190.6,200
+residential house plots (no group housing),2024,190.7,648,161.1,223.4,200
+residential house plots (no group housing),2025,278.8,141,244.3,320.6,200
+residential house plots (no group housing),2026,342.7,167,291.5,408.2,200
+residential incl. group housing,2019,100.0,128,100.0,100.0,200
+residential incl. group housing,2020,103.0,196,90.6,112.4,200
+residential incl. group housing,2021,105.9,506,92.0,122.7,200
+residential incl. group housing,2022,123.5,376,104.3,150.1,200
+residential incl. group housing,2023,153.0,437,123.6,193.6,200
+residential incl. group housing,2024,191.1,652,162.5,233.9,200
+residential incl. group housing,2025,275.5,147,235.0,330.9,200
+residential incl. group housing,2026,340.0,175,293.8,431.3,200
+commercial,2019,100.0,67,100.0,100.0,200
+commercial,2020,101.0,84,76.6,117.5,200
+commercial,2021,106.6,303,75.9,131.1,200
+commercial,2022,112.5,259,74.4,139.0,200
+commercial,2023,180.4,123,95.5,236.0,200
+commercial,2024,174.3,159,107.4,266.5,200
+commercial,2025,194.1,224,118.9,293.7,200
+commercial,2026,208.3,120,130.6,321.0,200

@@ -1,0 +1,93 @@
+/* The Real Estate Paper: the reference pages (How I know, Data, What I'm not claiming yet, About), on this site's
+   shared classes (.re-sec, .re-list, .re-dl, .re-tests, .rules, .contact). Flat colour only: no borders, no lines,
+   no shadows. New motion sits under .m3, which v2.js sets only when motion is welcome, so with reduced motion or no
+   script every picture is simply finished. */
+
+/* ---------- counts under a page's title, and the list of held readings ---------- */
+.rf-count { margin-top: 18px; color: var(--soft); max-width: 60ch; }
+.rf-count b.n { color: var(--ink); }
+.rf-jump { padding: 28px var(--m) 0; }
+.rf-jump ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.rf-jump a { display: inline-block; padding: 8px 14px; background: var(--stone); font-size: var(--s-small); text-decoration: none; color: var(--ink); }
+.rf-jump a:hover, .rf-jump a:focus-visible { background: var(--blush); }
+
+/* ---------- a method: the plain answer, then "See it work" ---------- */
+.rf-q .re-sec-b > p { max-width: 62ch; }
+.rf-see { margin-top: 6px; }
+.rf-see > summary { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; background: var(--blush); font-weight: 600; cursor: pointer; list-style: none; }
+.rf-see > summary::-webkit-details-marker { display: none; }
+.rf-see > summary::after { content: "+"; font-weight: 400; }
+.rf-see[open] > summary::after { content: "\2212"; }
+.rf-see > summary:hover, .rf-see > summary:focus-visible { background: var(--pink); }
+.rf-fig { margin-top: 4px; padding: 22px clamp(16px, 2.4vw, 28px); background: var(--stone); display: grid; gap: 14px; }
+.rf-cap { font-size: var(--s-small); color: var(--soft); max-width: 60ch; }
+.rf-see, .rf-fig, .rf-fig > * { min-width: 0; }
+
+/* bars: a label, a flat bar, the figure */
+.rf-bars { display: grid; gap: 10px; }
+.rf-bar { display: grid; grid-template-columns: minmax(0, 16ch) minmax(0, 1fr) auto; gap: 6px 14px; align-items: center; font-size: var(--s-small); }
+.rf-bl { line-height: 1.3; }
+.rf-bt { position: relative; height: 16px; background: var(--paper); }
+.rf-bt i { position: absolute; inset: 0 auto 0 0; width: calc(var(--w) * 100%); background: var(--pink); transform-origin: 0 50%; }
+.rf-bar.hot .rf-bt i { background: var(--red); }
+.rf-bv { font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 600px) {
+  .rf-bar { grid-template-columns: minmax(0, 1fr) auto; }
+  .rf-bl { grid-column: 1 / -1; }
+}
+.m3 .rf-anim .rf-bt i { transform: scaleX(0); transition: transform 1s var(--ease); transition-delay: calc(var(--k) * 140ms + 100ms); }
+.m3 .rf-anim.go .rf-bt i { transform: none; }
+
+/* the tests: one square per test, the ones that passed the strict bar dark */
+.rf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16px, 1fr)); gap: 4px; width: 100%; max-width: 560px; }
+@media (max-width: 900px) { .re-sec.rf-q, .re-sec.rf-held { grid-template-columns: minmax(0, 1fr); } }
+.rf-grid i { aspect-ratio: 1; background: var(--paper); }
+.rf-grid i.on { background: var(--red); }
+.m3 .rf-anim .rf-grid i.on { background: var(--paper); transition: background-color .5s var(--ease); transition-delay: calc(var(--k) * 45ms + 150ms); }
+.m3 .rf-anim.go .rf-grid i.on { background: var(--red); }
+
+/* ---------- records, notes and the analysts' lines ---------- */
+.rf-when { display: block; margin-top: 6px; font-size: var(--s-small); color: var(--soft); }
+.rf-tech { font-style: normal; color: var(--soft); }
+.rf-aq { display: block; }
+
+/* ---------- the dated timeline ---------- */
+.rf-tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.rf-tl li { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 4px 20px; padding: 14px 20px; background: var(--stone); }
+.rf-tl li:nth-child(odd) { background: var(--blush); }
+.rf-tl-d { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; font-weight: 600; grid-row: span 2; }
+.rf-tl-t { line-height: 1.45; }
+.rf-tl-s { font-size: var(--s-small); color: var(--soft); overflow-wrap: anywhere; }
+.rf-tag { font-size: .6875rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; background: var(--paper); color: var(--soft); }
+.rf-tag-p { background: var(--pink); color: var(--ink); }
+@media (max-width: 700px) {
+  .rf-tl li { grid-template-columns: 1fr; }
+  .rf-tl-d { grid-row: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; }
+}
+
+/* ---------- where the plain part ends ---------- */
+.rf-stop { margin: clamp(64px, 8vw, 120px) var(--m) 0; padding: clamp(22px, 3vw, 36px); background: var(--clay); color: var(--paper); }
+.rf-stop p { font-size: var(--s-lead); line-height: 1.4; max-width: 46ch; }
+
+/* ---------- a held reading: three labelled parts ---------- */
+.rf-held .re-sec-b { gap: 4px; }
+.rf-part { padding: 18px 22px; background: var(--stone); }
+.rf-part:first-child { background: var(--blush); }
+.rf-k { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin-bottom: 6px; }
+.rf-say { font-size: var(--s-lead); line-height: 1.35; }
+.rf-held .rf-fig { margin-top: 0; }
+
+/* ---------- the data page ---------- */
+.rf-dl li span.rf-what { color: var(--ink); font-size: var(--s-body); }
+.rf-cols { margin-top: 8px; font-size: var(--s-small); }
+.rf-cols summary { cursor: pointer; color: var(--ink); font-weight: 600; }
+.rf-cols dl { margin: 8px 0 0; padding: 12px 16px; background: var(--stone); display: grid; gap: 6px; }
+.rf-cols dl div { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 4px 14px; }
+.rf-cols dt code { font-size: .9em; overflow-wrap: anywhere; }
+.rf-cols dd { margin: 0; color: var(--ink); line-height: 1.4; }
+@media (max-width: 600px) { .rf-cols dl div { grid-template-columns: 1fr; } }
+
+/* ---------- about ---------- */
+.rf-why .re-sec-b { grid-column: 2; }
+.rf-why .re-sec-b p { max-width: 60ch; }
+@media (max-width: 900px) { .rf-why .re-sec-b { grid-column: auto; } }

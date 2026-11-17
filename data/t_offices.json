@@ -1,0 +1,838 @@
+{
+ "built": "2026-11-17",
+ "read": {
+  "current": "2026-11-13",
+  "histories": "2026-11-13 to 2026-11-15"
+ },
+ "offices": [
+  {
+   "sro": "AMER",
+   "label": "North and north-west periphery (Amer, Delhi Road, Kalwar Road, Sikar Road villages)",
+   "revision_date_key": "o_amer_date",
+   "revision_date": "2026-08-06",
+   "date_note": "date printed on AMER's current rates (history pop-ups read: 1); a 31 July 2026 line sits below it",
+   "com_res_ratio": {
+    "value": 2.5742574257425743,
+    "key": "s2r_amer"
+   },
+   "spread_res_p90p10": {
+    "value": 7.574850299401201,
+    "key": "o_amer_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 8.426966292134832,
+    "key": "o_amer_modal"
+   },
+   "level_vs_median_office": {
+    "value": 1.1475409836065573,
+    "key": "o_amer_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "BASSI",
+   "label": "East (Agra Road)",
+   "revision_date_key": "o_bassi_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on BASSI's current rates (history pop-ups read: 39)",
+   "com_res_ratio": {
+    "value": 2.7118055555555554,
+    "key": "s2r_bassi"
+   },
+   "spread_res_p90p10": {
+    "value": 1.5250544662309369,
+    "key": "o_bassi_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 35.294117647058826,
+    "key": "o_bassi_modal"
+   },
+   "level_vs_median_office": {
+    "value": 1.0,
+    "key": "o_bassi_level"
+   },
+   "step_res": {
+    "median_pct": 45.45454545454546,
+    "n": 33,
+    "key": "s1_bassi_res",
+    "p25": 35.064935064935064,
+    "p75": 45.933014354066984,
+    "p25_key": "o_bassi_step_res_p25",
+    "p75_key": "o_bassi_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 44.53627180899908,
+    "n": 34,
+    "key": "s1_bassi_com",
+    "p25": 24.88636363636364,
+    "p75": 45.8133971291866,
+    "p25_key": "o_bassi_step_com_p25",
+    "p75_key": "o_bassi_step_com_p75"
+   }
+  },
+  {
+   "sro": "CHAKSU",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_chaksu_date",
+   "revision_date": "2026-08-01",
+   "date_note": "date printed on CHAKSU's current rates (history pop-ups read: 1); no July line",
+   "com_res_ratio": {
+    "value": 5.227272727272727,
+    "key": "s2r_chaksu"
+   },
+   "spread_res_p90p10": {
+    "value": 1.4,
+    "key": "o_chaksu_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 36.36363636363637,
+    "key": "o_chaksu_modal"
+   },
+   "level_vs_median_office": {
+    "value": 1.0655737704918034,
+    "key": "o_chaksu_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "CHOMU",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_chomu_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on CHOMU's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 6.666666666666667,
+    "key": "s2r_chomu"
+   },
+   "spread_res_p90p10": {
+    "value": 1.574468085106383,
+    "key": "o_chomu_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 17.880794701986755,
+    "key": "o_chomu_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.9918032786885246,
+    "key": "o_chomu_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "DUDU",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_dudu_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on DUDU's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 4.2,
+    "key": "s2r_dudu"
+   },
+   "spread_res_p90p10": {
+    "value": 2.849056603773585,
+    "key": "o_dudu_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 22.22222222222222,
+    "key": "o_dudu_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.32786885245901637,
+    "key": "o_dudu_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "JAIPUR-I",
+   "label": "South-central (Tonk Road, JLN Marg, Malviya Nagar, Jagatpura)",
+   "revision_date_key": "o_jaipur_i_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on JAIPUR-I's current rates (history pop-ups read: 39)",
+   "com_res_ratio": {
+    "value": 2.9166666666666665,
+    "key": "s2r_jaipur_i"
+   },
+   "spread_res_p90p10": {
+    "value": 5.833333333333333,
+    "key": "o_jaipur_i_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 9.54653937947494,
+    "key": "o_jaipur_i_modal"
+   },
+   "level_vs_median_office": {
+    "value": 4.098360655737705,
+    "key": "o_jaipur_i_level"
+   },
+   "step_res": {
+    "median_pct": 27.177423624715413,
+    "n": 38,
+    "key": "s1_i_res",
+    "p25": 15.639354769789549,
+    "p75": 40.80696299006157,
+    "p25_key": "o_jaipur_i_step_res_p25",
+    "p75_key": "o_jaipur_i_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 18.83597700951033,
+    "n": 38,
+    "key": "s1_i_com",
+    "p25": 8.722996132197109,
+    "p75": 30.453378956372973,
+    "p25_key": "o_jaipur_i_step_com_p25",
+    "p75_key": "o_jaipur_i_step_com_p75"
+   }
+  },
+  {
+   "sro": "JAIPUR-II",
+   "label": "Core: central (C-Scheme, MI Road, Bani Park, Civil Lines)",
+   "revision_date_key": "o_jaipur_ii_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on JAIPUR-II's current rates (history pop-ups read: 39)",
+   "com_res_ratio": {
+    "value": 2.9310344827586206,
+    "key": "s2r_jaipur_ii"
+   },
+   "spread_res_p90p10": {
+    "value": 4.7560975609756095,
+    "key": "o_jaipur_ii_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 16.9811320754717,
+    "key": "o_jaipur_ii_modal"
+   },
+   "level_vs_median_office": {
+    "value": 7.540983606557377,
+    "key": "o_jaipur_ii_level"
+   },
+   "step_res": {
+    "median_pct": 25.2011452439849,
+    "n": 38,
+    "key": "s1_ii_res",
+    "p25": 13.869745476510802,
+    "p75": 38.26672522324696,
+    "p25_key": "o_jaipur_ii_step_res_p25",
+    "p75_key": "o_jaipur_ii_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 21.104472791861784,
+    "n": 39,
+    "key": "s1_ii_com",
+    "p25": 9.633695519376362,
+    "p75": 33.76264501996228,
+    "p25_key": "o_jaipur_ii_step_com_p25",
+    "p75_key": "o_jaipur_ii_step_com_p75"
+   }
+  },
+  {
+   "sro": "JAIPUR-III",
+   "label": "West (Vaishali Nagar, Jhotwara, Sirsi and Niwaru roads)",
+   "revision_date_key": "o_jaipur_iii_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on JAIPUR-III's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 2.8333333333333335,
+    "key": "s2r_jaipur_iii"
+   },
+   "spread_res_p90p10": {
+    "value": 1.3636363636363635,
+    "key": "o_jaipur_iii_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 31.378299120234605,
+    "key": "o_jaipur_iii_modal"
+   },
+   "level_vs_median_office": {
+    "value": 2.1311475409836067,
+    "key": "o_jaipur_iii_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "JAIPUR-IV",
+   "label": "South-central (Tonk Road, JLN Marg, Malviya Nagar, Jagatpura)",
+   "revision_date_key": "o_jaipur_iv_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on JAIPUR-IV's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 2.4,
+    "key": "s2r_jaipur_iv"
+   },
+   "spread_res_p90p10": {
+    "value": 2.5,
+    "key": "o_jaipur_iv_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 15.584415584415584,
+    "key": "o_jaipur_iv_modal"
+   },
+   "level_vs_median_office": {
+    "value": 4.098360655737705,
+    "key": "o_jaipur_iv_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "JAIPUR-V",
+   "label": "North (Vidyadhar Nagar, Shastri Nagar, Murlipura, Sikar Road)",
+   "revision_date_key": "o_jaipur_v_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on JAIPUR-V's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 3.272727272727273,
+    "key": "s2r_jaipur_v"
+   },
+   "spread_res_p90p10": {
+    "value": 3.076923076923077,
+    "key": "o_jaipur_v_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 17.543859649122805,
+    "key": "o_jaipur_v_modal"
+   },
+   "level_vs_median_office": {
+    "value": 3.19672131147541,
+    "key": "o_jaipur_v_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "JAIPUR-VI",
+   "label": "Core: walled city and east",
+   "revision_date_key": "o_jaipur_vi_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on JAIPUR-VI's current rates (history pop-ups read: 39)",
+   "com_res_ratio": {
+    "value": 3.8,
+    "key": "s2r_jaipur_vi"
+   },
+   "spread_res_p90p10": {
+    "value": 2.5555555555555554,
+    "key": "o_jaipur_vi_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 12.977099236641221,
+    "key": "o_jaipur_vi_modal"
+   },
+   "level_vs_median_office": {
+    "value": 2.2950819672131146,
+    "key": "o_jaipur_vi_level"
+   },
+   "step_res": {
+    "median_pct": 18.94647408666099,
+    "n": 33,
+    "key": "s1_vi_res",
+    "p25": 9.8901098901099,
+    "p75": 30.681818181818187,
+    "p25_key": "o_jaipur_vi_step_res_p25",
+    "p75_key": "o_jaipur_vi_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 1.2350678274954507,
+    "n": 35,
+    "key": "s1_vi_com",
+    "p25": 0.6652142645627968,
+    "p75": 1.604734977940725,
+    "p25_key": "o_jaipur_vi_step_com_p25",
+    "p75_key": "o_jaipur_vi_step_com_p75"
+   }
+  },
+  {
+   "sro": "JAIPUR-VII",
+   "label": "West (Vaishali Nagar, Jhotwara, Sirsi and Niwaru roads)",
+   "revision_date_key": "o_jaipur_vii_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on JAIPUR-VII's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 1.6666666666666667,
+    "key": "s2r_jaipur_vii"
+   },
+   "spread_res_p90p10": {
+    "value": 2.2777777777777777,
+    "key": "o_jaipur_vii_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 60.78431372549019,
+    "key": "o_jaipur_vii_modal"
+   },
+   "level_vs_median_office": {
+    "value": 2.9508196721311477,
+    "key": "o_jaipur_vii_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "JAIPUR-VIII",
+   "label": "South-central (Tonk Road, JLN Marg, Malviya Nagar, Jagatpura)",
+   "revision_date_key": "o_jaipur_viii_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on JAIPUR-VIII's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 3.888888888888889,
+    "key": "s2r_jaipur_viii"
+   },
+   "spread_res_p90p10": {
+    "value": 3.816793893129771,
+    "key": "o_jaipur_viii_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 17.77777777777778,
+    "key": "o_jaipur_viii_modal"
+   },
+   "level_vs_median_office": {
+    "value": 3.442622950819672,
+    "key": "o_jaipur_viii_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "JALSU",
+   "label": "North and north-west periphery (Amer, Delhi Road, Kalwar Road, Sikar Road villages)",
+   "revision_date_key": "o_jalsu_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on JALSU's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 2.75,
+    "key": "s2r_jalsu"
+   },
+   "spread_res_p90p10": {
+    "value": 1.7857142857142858,
+    "key": "o_jalsu_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 43.47826086956522,
+    "key": "o_jalsu_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.2459016393442623,
+    "key": "o_jalsu_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "KALWAR",
+   "label": "North and north-west periphery (Amer, Delhi Road, Kalwar Road, Sikar Road villages)",
+   "revision_date_key": "o_kalwar_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on KALWAR's current rates (history pop-ups read: 1)",
+   "com_res_ratio": {
+    "value": 2.775,
+    "key": "s2r_kalwar"
+   },
+   "spread_res_p90p10": {
+    "value": 3.542105263157896,
+    "key": "o_kalwar_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 11.904761904761903,
+    "key": "o_kalwar_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.819672131147541,
+    "key": "o_kalwar_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "one colony read, no office median"
+  },
+  {
+   "sro": "KHEJROLI",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_khejroli_date",
+   "revision_date": null,
+   "date_note": "KHEJROLI: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 6.833333333333333,
+    "key": "s2r_khejroli"
+   },
+   "spread_res_p90p10": {
+    "value": 1.5573770491803278,
+    "key": "o_khejroli_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 10.0,
+    "key": "o_khejroli_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.44426229508196724,
+    "key": "o_khejroli_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "KISHANGARH RENWAL",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_kishangarh_renwal_date",
+   "revision_date": null,
+   "date_note": "KISHANGARH RENWAL: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 2.6923076923076925,
+    "key": "s2r_kishangarh_renwal"
+   },
+   "spread_res_p90p10": {
+    "value": 4.566176470588236,
+    "key": "o_kishangarh_renwal_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 15.384615384615385,
+    "key": "o_kishangarh_renwal_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.639344262295082,
+    "key": "o_kishangarh_renwal_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "MADHORAJPURA",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_madhorajpura_date",
+   "revision_date": null,
+   "date_note": "MADHORAJPURA: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 1.6198830409356724,
+    "key": "s2r_madhorajpura"
+   },
+   "spread_res_p90p10": {
+    "value": 3.3333333333333335,
+    "key": "o_madhorajpura_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 33.33333333333333,
+    "key": "o_madhorajpura_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.2786885245901639,
+    "key": "o_madhorajpura_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "MANOHARPURA",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_manoharpura_date",
+   "revision_date": null,
+   "date_note": "MANOHARPURA: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 2.4615384615384617,
+    "key": "s2r_manoharpura"
+   },
+   "spread_res_p90p10": {
+    "value": 1.4772727272727273,
+    "key": "o_manoharpura_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 23.809523809523807,
+    "key": "o_manoharpura_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.9016393442622951,
+    "key": "o_manoharpura_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "MUNDOTA",
+   "label": "North and north-west periphery (Amer, Delhi Road, Kalwar Road, Sikar Road villages)",
+   "revision_date_key": "o_mundota_date",
+   "revision_date": null,
+   "date_note": "MUNDOTA: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 2.9375,
+    "key": "s2r_mundota"
+   },
+   "spread_res_p90p10": {
+    "value": 3.585714285714286,
+    "key": "o_mundota_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 34.285714285714285,
+    "key": "o_mundota_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.26229508196721313,
+    "key": "o_mundota_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "PHAGI",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_phagi_date",
+   "revision_date": null,
+   "date_note": "PHAGI: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 1.1875,
+    "key": "s2r_phagi"
+   },
+   "spread_res_p90p10": {
+    "value": 3.0,
+    "key": "o_phagi_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 35.08771929824561,
+    "key": "o_phagi_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.4426229508196721,
+    "key": "o_phagi_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "RAMPURA DABRI",
+   "label": "North and north-west periphery (Amer, Delhi Road, Kalwar Road, Sikar Road villages)",
+   "revision_date_key": "o_rampura_dabri_date",
+   "revision_date": "2026-07-31",
+   "date_note": "date printed on RAMPURA DABRI's current rates (history pop-ups read: 34)",
+   "com_res_ratio": {
+    "value": 3.046511627906977,
+    "key": "s2r_rampura_dabri"
+   },
+   "spread_res_p90p10": {
+    "value": 9.45945945945946,
+    "key": "o_rampura_dabri_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 5.05050505050505,
+    "key": "o_rampura_dabri_modal"
+   },
+   "level_vs_median_office": {
+    "value": 1.4426229508196722,
+    "key": "o_rampura_dabri_level"
+   },
+   "step_res": {
+    "median_pct": 1.849529780564263,
+    "n": 6,
+    "key": "s1_rd_res",
+    "p25": 1.2121212121212144,
+    "p75": 2.7429467084639505,
+    "p25_key": "o_rampura_dabri_step_res_p25",
+    "p75_key": "o_rampura_dabri_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 1.298701298701288,
+    "n": 7,
+    "key": "s1_rd_com",
+    "p25": 1.0915607689801266,
+    "p75": 14.001989001989001,
+    "p25_key": "o_rampura_dabri_step_com_p25",
+    "p75_key": "o_rampura_dabri_step_com_p75"
+   }
+  },
+  {
+   "sro": "RENWAL MANJHI",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_renwal_manjhi_date",
+   "revision_date": null,
+   "date_note": "RENWAL MANJHI: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 1.282857142857143,
+    "key": "s2r_renwal_manjhi"
+   },
+   "spread_res_p90p10": {
+    "value": 2.888,
+    "key": "o_renwal_manjhi_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 18.571428571428573,
+    "key": "o_renwal_manjhi_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.32786885245901637,
+    "key": "o_renwal_manjhi_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "SAMBHAR",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_sambhar_date",
+   "revision_date": null,
+   "date_note": "SAMBHAR: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 4.582882882882883,
+    "key": "s2r_sambhar"
+   },
+   "spread_res_p90p10": {
+    "value": 2.3636363636363638,
+    "key": "o_sambhar_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 19.047619047619047,
+    "key": "o_sambhar_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.3442622950819672,
+    "key": "o_sambhar_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  },
+  {
+   "sro": "SANGANER-I",
+   "label": "South (Sanganer, outer Tonk Road, Sitapura, Jagatpura villages)",
+   "revision_date_key": "o_sanganer_i_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on SANGANER-I's current rates (history pop-ups read: 38)",
+   "com_res_ratio": {
+    "value": 2.366501946690626,
+    "key": "s2r_sanganer_i"
+   },
+   "spread_res_p90p10": {
+    "value": 4.684210526315789,
+    "key": "o_sanganer_i_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 8.967391304347826,
+    "key": "o_sanganer_i_modal"
+   },
+   "level_vs_median_office": {
+    "value": 2.0,
+    "key": "o_sanganer_i_level"
+   },
+   "step_res": {
+    "median_pct": 47.72727272727273,
+    "n": 16,
+    "key": "s1_s1_res",
+    "p25": 47.36017158884672,
+    "p75": 48.05194805194806,
+    "p25_key": "o_sanganer_i_step_res_p25",
+    "p75_key": "o_sanganer_i_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 47.108957219251344,
+    "n": 16,
+    "key": "s1_s1_com",
+    "p25": 44.631859545914146,
+    "p75": 47.34729742566732,
+    "p25_key": "o_sanganer_i_step_com_p25",
+    "p75_key": "o_sanganer_i_step_com_p75"
+   }
+  },
+  {
+   "sro": "SANGANER-II",
+   "label": "South-west (outer Ajmer Road, New Sanganer Road, Muhana, Bhankrota)",
+   "revision_date_key": "o_sanganer_ii_date",
+   "revision_date": "2026-07-30",
+   "date_note": "date printed on SANGANER-II's current rates (history pop-ups read: 38)",
+   "com_res_ratio": {
+    "value": 3.1578947368421053,
+    "key": "s2r_sanganer_ii"
+   },
+   "spread_res_p90p10": {
+    "value": 5.271428571428571,
+    "key": "o_sanganer_ii_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 7.4324324324324325,
+    "key": "o_sanganer_ii_modal"
+   },
+   "level_vs_median_office": {
+    "value": 2.622950819672131,
+    "key": "o_sanganer_ii_level"
+   },
+   "step_res": {
+    "median_pct": 47.24859211584875,
+    "n": 36,
+    "key": "s1_s2_res",
+    "p25": 46.46464646464648,
+    "p75": 47.627005347593574,
+    "p25_key": "o_sanganer_ii_step_res_p25",
+    "p75_key": "o_sanganer_ii_step_res_p75"
+   },
+   "step_com": {
+    "median_pct": 33.006993006993,
+    "n": 36,
+    "key": "s1_s2_com",
+    "p25": 19.20007199075196,
+    "p75": 47.16394716394717,
+    "p25_key": "o_sanganer_ii_step_com_p25",
+    "p75_key": "o_sanganer_ii_step_com_p75"
+   }
+  },
+  {
+   "sro": "SHAHPURA",
+   "label": "Satellite towns (outside the JDA core)",
+   "revision_date_key": "o_shahpura_date",
+   "revision_date": null,
+   "date_note": "SHAHPURA: not read (the run stopped at the portal's error before this office)",
+   "com_res_ratio": {
+    "value": 4.0,
+    "key": "s2r_shahpura"
+   },
+   "spread_res_p90p10": {
+    "value": 3.888888888888889,
+    "key": "o_shahpura_spread"
+   },
+   "modal_share_res_pct": {
+    "value": 17.647058823529413,
+    "key": "o_shahpura_modal"
+   },
+   "level_vs_median_office": {
+    "value": 0.7377049180327869,
+    "key": "o_shahpura_level"
+   },
+   "step_res": null,
+   "step_com": null,
+   "step_note": "not read"
+  }
+ ],
+ "no_urban_rates": [
+  "AANDHI",
+  "AMARSIR",
+  "BAGRU",
+  "BICHOON",
+  "DEHLALA",
+  "GOVINDGARH",
+  "JAIPUR-IX",
+  "JAIPUR-X",
+  "JAIPUR-XI",
+  "JAMVA RAMGARH",
+  "JOBNER",
+  "KOTKHAWDA",
+  "MOJMABAD",
+  "NIMEDA",
+  "SAKHOON",
+  "SR JAIPUR XII",
+  "TALA",
+  "TUNGA"
+ ],
+ "ladder_ref": "t_ladder.json",
+ "caveat": "Office aggregates only: the portal's terms do not allow its rates to be reproduced, so no rupee figure appears. Circle rates are the state's minimum values for stamp duty, not prices. Rows on a rate table, not plots or deeds. Steps come from sampled colonies and are not weighted by deeds. Dates are those the portal prints, which may be entry dates."
+}

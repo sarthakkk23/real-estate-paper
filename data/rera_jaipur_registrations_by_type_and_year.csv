@@ -1,0 +1,11 @@
+year,plotted,plotted_read_twice,group_housing,group_housing_read_twice,commercial,commercial_read_twice,mixed,mixed_read_twice,total,state_total
+2017,11,True,247,True,12,False,10,False,280,577
+2018,36,True,70,True,3,False,2,False,111,290
+2019,47,True,57,True,0,False,3,False,107,290
+2020,37,True,74,True,1,False,1,False,113,238
+2021,73,True,105,True,3,False,2,False,183,369
+2022,142,True,151,True,6,False,6,False,305,514
+2023,149,True,145,True,7,False,3,False,304,571
+2024,128,True,120,True,7,False,5,False,260,536
+2025,261,True,183,True,7,False,4,False,455,1125
+2026,160,True,95,True,16,False,6,False,277,921

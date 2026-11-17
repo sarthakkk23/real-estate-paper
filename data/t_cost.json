@@ -1,0 +1,152 @@
+{
+ "built": "2026-11-17",
+ "as_read": "November 2026",
+ "source": "Rajasthan Finance Department notifications (the inputs are offered on the Data page as transaction_cost_inputs.csv)",
+ "rates": [
+  {
+   "id": "duty_general",
+   "value": 6.0,
+   "applies_to": "Conveyance duty, man or general buyer",
+   "notification": "F.4(4)FD/Tax/2020-135",
+   "dated": "2020-02-20",
+   "verbatim": "reduced, with immediate effect, from 11 percent to 6 percent"
+  },
+  {
+   "id": "duty_women_other",
+   "value": 5.0,
+   "applies_to": "Conveyance in favour of a woman not of SC, ST or BPL categories: clause (ii) of F.4(15)FD/Tax/2014-58 (14 Jul 2014) as amended",
+   "notification": "F.4(4)FD/Tax/2020-131",
+   "dated": "2020-02-20",
+   "verbatim": "in clause (ii), for the existing expression \"four percent\", the expression \"five percent\" shall be substituted"
+  },
+  {
+   "id": "duty_women_scstbpl",
+   "value": 4.0,
+   "applies_to": "Conveyance in favour of a woman of SC, ST or BPL categories: clause (i) of F.4(15)FD/Tax/2014-58 (14 Jul 2014) as amended",
+   "notification": "F.4(4)FD/Tax/2020-131",
+   "dated": "2020-02-20",
+   "verbatim": "in clause (i), for the existing expression \"three percent\", the expression \"four percent\" shall be substituted"
+  },
+  {
+   "id": "duty_disability",
+   "value": 5.0,
+   "applies_to": "Conveyance in favour of a person with benchmark disabilities (supersedes F.4(15)FD/Tax/2014-59)",
+   "notification": "F.4(4)FD/Tax/2020-130",
+   "dated": "2020-02-20",
+   "verbatim": "shall be reduced and charged at the rate of five percent"
+  },
+  {
+   "id": "surcharge_3a",
+   "value": 13.0,
+   "applies_to": "Sec 3-A surcharge, as a percentage of the stamp duty, on all instruments except those the Act's proviso charges at 10%",
+   "notification": "F.4(2)FD/Tax/2026-132",
+   "dated": "2026-02-11",
+   "verbatim": "the surcharge at the rate of 13 percent shall be charged on the stamp duty payable on all the instruments"
+  },
+  {
+   "id": "surcharge_3a_proviso",
+   "value": 10.0,
+   "applies_to": "Sec 3-A surcharge on instruments of a value up to the threshold (the Act's proviso)",
+   "notification": "Rajasthan Finance Act 2026 (Act 3 of 2026) Sec 5",
+   "dated": "2026-03-24",
+   "verbatim": "a proviso fixes 10% for instruments up to Rs 10 lakh"
+  },
+  {
+   "id": "surcharge_3b",
+   "value": 20.0,
+   "applies_to": "Sec 3-B surcharge, as a percentage of the stamp duty payable",
+   "notification": "F.2(9)FD/Tax/2020-176",
+   "dated": "2020-05-15",
+   "verbatim": "Sec 3-B notified at 20% on the stamp duty payable"
+  },
+  {
+   "id": "registration_fee",
+   "value": 1.0,
+   "applies_to": "Registration fee, documents charged ad valorem (Article I), no maximum stated",
+   "notification": "F.4(2)FD/Tax/2024-68",
+   "dated": "2024-02-08",
+   "verbatim": "1% of the value or consideration whichever is higher"
+  }
+ ],
+ "threshold_inr": 1000000.0,
+ "threshold_key": "tc_threshold",
+ "lines": [
+  {
+   "line": "duty",
+   "of": "value",
+   "rate": "category"
+  },
+  {
+   "line": "surcharge_3a",
+   "of": "duty",
+   "rate": "surcharge_3a",
+   "rate_if_value_up_to_threshold": "surcharge_3a_proviso"
+  },
+  {
+   "line": "surcharge_3b",
+   "of": "duty",
+   "rate": "surcharge_3b"
+  },
+  {
+   "line": "registration_fee",
+   "of": "value",
+   "rate": "registration_fee",
+   "maximum": null
+  }
+ ],
+ "categories": [
+  {
+   "id": "man",
+   "label": "Man, or general buyer",
+   "duty": "duty_general"
+  },
+  {
+   "id": "woman_other",
+   "label": "Woman, not of SC, ST or BPL categories",
+   "duty": "duty_women_other"
+  },
+  {
+   "id": "woman_scstbpl",
+   "label": "Woman of SC, ST or BPL categories",
+   "duty": "duty_women_scstbpl"
+  },
+  {
+   "id": "disability",
+   "label": "Person with benchmark disabilities",
+   "duty": "duty_disability"
+  }
+ ],
+ "examples": [
+  {
+   "value": 5000000.0,
+   "category": "man",
+   "total_key": "tc_man_total",
+   "pct_key": "tc_man"
+  },
+  {
+   "value": 5000000.0,
+   "category": "woman_other",
+   "total_key": "tc_w5_total",
+   "pct_key": "tc_w5"
+  },
+  {
+   "value": 5000000.0,
+   "category": "woman_scstbpl",
+   "total_key": "tc_w4_total",
+   "pct_key": "tc_w4"
+  },
+  {
+   "value": 5000000.0,
+   "category": "disability",
+   "total_key": "tc_dis_total",
+   "pct_key": "tc_dis"
+  },
+  {
+   "value": 1000000.0,
+   "category": "man",
+   "total_key": "tc_man_10l_total",
+   "pct_key": "tc_man_10l"
+  }
+ ],
+ "caveat": "Worked from the Finance Department's notifications, read in November 2026. A later amendment has not been ruled out. Concessions reported for joint purchase by a couple and for some flats, which I have not confirmed, would lower the total and are not included. Lease, regularisation and loan documents are charged differently and are not covered."
+}

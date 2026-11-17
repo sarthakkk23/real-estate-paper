@@ -1,0 +1,237 @@
+{
+ "built": "2026-11-17",
+ "windows": [
+  {
+   "id": "A",
+   "label": "2023 to 2024",
+   "span": "July 2022 to December 2024",
+   "span_key": "pm_a_span",
+   "rows": [
+    {
+     "measure": "PropEquity launch price",
+     "what": "weighted average INR/sq ft of projects launched in the period",
+     "key": "pm_a_launch",
+     "value": 64.6,
+     "period": "2023 -> Jan-Sep 2024",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "JDA auction land-price index (same-scheme)",
+     "what": "auction-cleared price of JDA plots, index (other stream)",
+     "key": "pm_a_jda",
+     "value": 19.9,
+     "period": "2023 -> 2024",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "NHB RESIDEX HPI@Assessment",
+     "what": "bank valuation of mortgaged homes, index",
+     "key": "pm_a_nhb",
+     "value": 7.6,
+     "period": "CY2023 mean -> CY2024 mean (quarters)",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "RBI HPI (registration-based)",
+     "what": "registered transaction prices",
+     "key": "pm_a_rbi",
+     "value": -0.3,
+     "period": "Q4 2023-24 (Jan-Mar 2024) y/y",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "VERIFIED"
+    },
+    {
+     "measure": "NHB RESIDEX HPI@Market Price",
+     "what": "builders' quoted prices, under-construction",
+     "key": "pm_a_builder",
+     "value": -3.4,
+     "period": "Jul-Sep 2023 y/y",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "VERIFIED"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "label": "2025 to 2026",
+   "span": "January 2025 to November 2026",
+   "span_key": "pm_b_span",
+   "rows": [
+    {
+     "measure": "JDA auction land-price index (same-scheme)",
+     "what": "index (other stream)",
+     "key": "pm_b_jda",
+     "value": 18.4,
+     "period": "2025 -> 2026 to 10 Nov",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "Registration revenue per sale deed (IGRS)",
+     "what": "INR lakh per sale deed",
+     "key": "pm_b_reg",
+     "value": 16.3,
+     "period": "Apr-Oct 2025 -> 2026",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "Housing.com asking price",
+     "what": "average listing price, INR/sq ft",
+     "key": "pm_b_housing",
+     "value": 16.0,
+     "period": "Oct 2025 -> Oct 2026",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "QUOTED"
+    },
+    {
+     "measure": "NHB RESIDEX HPI@Assessment (base 2024-25)",
+     "what": "bank valuation, index",
+     "key": "pm_b_nhb",
+     "value": 12.5,
+     "period": "Jun 2025 -> Jun 2026",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "NHB RESIDEX carpet price, units <=60 sq m",
+     "what": "bank valuation, INR/sq ft carpet",
+     "key": "pm_b_nhbsmall",
+     "value": 12.7,
+     "period": "Jun 2025 -> Jun 2026",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "label": "2019 to 2025",
+   "span": "January 2019 to December 2025",
+   "span_key": "pm_c_span",
+   "rows": [
+    {
+     "measure": "JDA auction land-price index (same-scheme)",
+     "what": "auction-cleared land price, index",
+     "key": "pm_c_jda",
+     "value": 125.8,
+     "period": "2019 -> 2025",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    },
+    {
+     "measure": "NHB RESIDEX HPI@Assessment",
+     "what": "bank valuation, index",
+     "key": "pm_c_nhb",
+     "value": 38.1,
+     "period": "CY2019 mean -> CY2025 mean",
+     "source": "published price measures, each with its publisher and date (see the note)",
+     "status": "COMPUTED"
+    }
+   ]
+  }
+ ],
+ "not_in_windows": [
+  {
+   "measure": "Square Yards asking price",
+   "key": "pm_b_sy",
+   "level_key": "lv_sy",
+   "reason": "the portal does not say over what period its change runs; its level is shown instead"
+  }
+ ],
+ "levels": [
+  {
+   "measure": "Square Yards city average asking price",
+   "key": "lv_sy",
+   "value": 4950.0,
+   "unit": "INR per sq ft",
+   "period": "Sep 2026"
+  },
+  {
+   "measure": "Housing.com average asking price",
+   "key": "lv_housing",
+   "value": 6432.0,
+   "unit": "INR per sq ft",
+   "period": "Oct 2026"
+  },
+  {
+   "measure": "JLL residential capital value (low)",
+   "key": "lv_jll_lo",
+   "value": 5000.0,
+   "unit": "INR per sq ft",
+   "period": "2024"
+  },
+  {
+   "measure": "JLL residential capital value (high)",
+   "key": "lv_jll_hi",
+   "value": 7000.0,
+   "unit": "INR per sq ft",
+   "period": "2024"
+  },
+  {
+   "measure": "PropEquity launch price",
+   "key": "lv_launch",
+   "value": 6979.0,
+   "unit": "INR per sq ft",
+   "period": "Jan-Sep 2024"
+  },
+  {
+   "measure": "NHB RESIDEX carpet-area price <=60 sq m",
+   "key": "lv_nhb_small",
+   "value": 5000.0,
+   "unit": "INR per sq ft",
+   "period": "Jun 2026"
+  }
+ ],
+ "which_to_use": [
+  {
+   "question": "What will a new flat cost?",
+   "suits": "Launch price, RERA project filings",
+   "not": "Registered price, circle rate"
+  },
+  {
+   "question": "How has an existing home's value changed?",
+   "suits": "RBI registered-price index, then NHB bank valuations",
+   "not": "Launch price"
+  },
+  {
+   "question": "What are sellers hoping for now?",
+   "suits": "Asking prices, read as a range across portals",
+   "not": "Any one portal as \"the price\""
+  },
+  {
+   "question": "What does stamp duty cost on a deal?",
+   "suits": "The colony's circle rate",
+   "not": "Asking price"
+  },
+  {
+   "question": "Is land outrunning homes?",
+   "suits": "JDA land index against NHB, as two numbers",
+   "not": "Circle rate (moves by decision)"
+  },
+  {
+   "question": "Is the market busy?",
+   "suits": "Registered sale deeds, from April 2024",
+   "not": "Revenue (moves with rates)"
+  }
+ ],
+ "which_to_use_source": "the proof-of-work pack's page on where the published sources disagree",
+ "held": [
+  {
+   "measure": "Chained circle-rate index (both windows)",
+   "reason": "held: a three-office sample, moves by decision"
+  },
+  {
+   "measure": "Registration revenue per sale deed, CY2023 to CY2024",
+   "reason": "crosses the 2024 reclassification of deed types"
+  },
+  {
+   "measure": "Implied ticket, PropEquity value / units",
+   "reason": "arithmetic on rounded published figures"
+  }
+ ],
+ "caveat": "Each figure is the publisher's own, quoted with its date, or computed here where marked. They measure different things and none is ranked as right."
+}

@@ -1,0 +1,149 @@
+/* The Real Estate Paper: the tools. Flat colour only, no lines, borders or shadows, in the paper look of v2.css and
+   estate.css. Motion is calm and only under .tl-anim, which tools.js sets when reduced motion is not asked for; without
+   the script every result is drawn in full and every panel is open. */
+
+.tl-work [hidden], .tl-cell[hidden], .tl-road[hidden] { display: none !important; }
+
+/* ---------- a tool's head ---------- */
+.tl-head h1 { font-size: var(--s-head); line-height: 1.02; max-width: 24ch; }
+
+/* ---------- the work area: inputs on the left, the result on the right ---------- */
+.tl-work { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px clamp(28px, 4vw, 72px); padding: clamp(28px, 4vw, 64px) var(--m);
+  background: var(--blush); align-items: start; }
+.tl-work-wide { grid-template-columns: minmax(0, 1fr); }
+.tl-form { background: var(--paper); padding: clamp(20px, 2.4vw, 32px); display: grid; gap: 20px; align-content: start; min-width: 0; }
+.tl-form-row { display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: end; }
+.tl-form-row > * { flex: 1 1 220px; }
+.tl-field { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.tl-field label, .tl-seg legend, .tl-plot legend { font-size: var(--s-small); font-weight: 600; line-height: 1.35; }
+.tl-field input, .tl-field select { width: 100%; font: inherit; font-size: var(--s-lead); padding: 10px 12px; border: 0; border-radius: 0; background: var(--stone);
+  color: var(--ink); font-variant-numeric: lining-nums tabular-nums; appearance: none; min-height: 52px; }
+.tl-field select { font-size: var(--s-body); background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 36px; }
+.tl-field input[aria-invalid="true"] { background: var(--pink); }
+.tl-field small { font-size: .8125rem; color: var(--soft); line-height: 1.4; }
+.tl-field small a { color: inherit; font-weight: 600; }
+.tl-field input:focus-visible, .tl-field select:focus-visible, .tl-opt input:focus-visible + span, .tl-copy-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.tl-seg, .tl-plot { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 8px; }
+.tl-seg legend, .tl-plot legend { padding: 0; margin-bottom: 8px; }
+.tl-plot { background: var(--stone); padding: 16px; gap: 14px; }
+.tl-plot legend { float: left; width: 100%; margin-bottom: 0; }
+.tl-plot .tl-field select { background-color: var(--paper); }
+.tl-opts { display: flex; flex-wrap: wrap; gap: 4px; }
+.tl-stack .tl-opts { flex-direction: column; }
+.tl-opt { position: relative; cursor: pointer; }
+.tl-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.tl-opt span { display: flex; align-items: center; min-height: 44px; padding: 6px 14px; background: var(--stone); font-size: var(--s-small); line-height: 1.3; transition: background-color .2s ease, color .2s ease; }
+.tl-plot .tl-opt span { background: var(--paper); }
+.tl-opt:hover span { background: var(--pink); }
+.tl-opt input:checked + span { background: var(--ink); color: var(--paper); }
+.tl-warn { font-size: .8125rem; line-height: 1.4; background: var(--stone); padding: 10px 12px; }
+
+/* ---------- the result: a sentence, then how sure, the limit, the source, and the line to copy ---------- */
+.tl-out { display: grid; gap: 22px; align-content: start; min-width: 0; }
+.tl-say { font-size: var(--s-lead); line-height: 1.3; letter-spacing: -0.01em; font-weight: 500; max-width: 40ch; font-variant-numeric: lining-nums; }
+.tl-say.tl-err { color: var(--red); }
+.tl-more { display: grid; gap: 20px; }
+.tl-k { display: block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin-bottom: 4px; }
+.tl-band p, .tl-src p, .tl-cav p { max-width: 60ch; line-height: 1.5; }
+.tl-band p + p { margin-top: 10px; }
+.tl-sub { font-size: var(--s-small); color: var(--soft); }
+.tl-sub b { color: var(--ink); font-weight: 600; }
+.tl-cav p { font-size: var(--s-small); font-style: italic; color: var(--soft); }
+.tl-src p { font-size: var(--s-small); color: var(--soft); }
+.tl-advice { font-size: var(--s-small); font-weight: 600; max-width: 60ch; }
+.tl-copy { display: grid; gap: 10px; justify-items: start; }
+.tl-copy-btn { font: inherit; font-size: var(--s-small); border: 0; cursor: pointer; }
+.tl-copied { font-size: var(--s-small); color: var(--soft); min-height: 1.2em; }
+.tl-copied:empty { display: none; }
+.tl-line { font-size: .8125rem; line-height: 1.45; color: var(--soft); background: var(--paper); padding: 12px 14px; max-width: 72ch; user-select: all; overflow-wrap: anywhere; }
+.tl-line:empty { display: none; }
+.tl-go-wrap { grid-column: 2; margin: 0; }
+.tl-go[hidden] { display: none; }
+
+/* ---------- tables: the working, the steps, the levels ---------- */
+.tl-tbl { overflow-x: auto; }
+.tl-tbl table { border-collapse: collapse; width: 100%; font-size: var(--s-small); font-variant-numeric: lining-nums tabular-nums; }
+.tl-tbl th, .tl-tbl td { text-align: left; padding: 12px 14px; vertical-align: top; }
+.tl-tbl thead th { background: var(--stone-2); font-weight: 600; }
+.tl-tbl tbody tr { background: var(--stone); }
+.tl-tbl tbody tr:nth-child(even) { background: var(--blush); }
+.tl-tbl td:nth-child(2) { white-space: nowrap; font-weight: 600; }
+.tl-tbl tr.tl-tot { background: var(--pink); font-weight: 600; }
+.tl-qtbl td:nth-child(2) { white-space: normal; }
+.tl-qtbl tr.tl-hit { background: var(--ink); color: var(--paper); }
+.tl-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ---------- offices: one or two side by side, field by field ---------- */
+.tl-cmp { display: grid; gap: 4px; }
+.tl-orow { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 16px 28px; padding: 18px 20px; background: var(--paper); align-items: start; }
+.tl-orow:nth-child(even) { background: var(--stone); }
+.tl-ohead { background: transparent !important; padding-block: 4px; }
+.tl-olab { font-size: var(--s-small); font-weight: 600; line-height: 1.4; margin: 0; }
+.tl-cells { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px 28px; }
+.tl-js .tl-cells { grid-template-columns: minmax(0, 1fr); }
+.tl-js .tl-two .tl-cells { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tl-cell { line-height: 1.5; max-width: 58ch; }
+.tl-cell p + p { margin-top: 8px; }
+.tl-oname { font-size: var(--s-lead); font-weight: 500; letter-spacing: -0.01em; }
+
+/* ---------- which price: one window's measures as flat bars from zero ---------- */
+.tl-js .tl-panel:not(.on) { display: none; }
+.tl-panel { display: grid; gap: 18px; }
+.tl-panel + .tl-panel { margin-top: 28px; }
+.tl-js .tl-panel + .tl-panel { margin-top: 0; }
+.tl-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.tl-brow { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 10px 24px; padding: 14px 16px; background: var(--paper); align-items: center; }
+.tl-brow:nth-child(even) { background: var(--stone); }
+.tl-blab b { display: block; font-weight: 600; line-height: 1.3; }
+.tl-blab span { display: block; font-size: .8125rem; color: var(--soft); line-height: 1.4; margin-top: 4px; }
+.tl-bar { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); align-items: center; gap: 12px; }
+.tl-bar b { grid-column: 1; grid-row: 1; font-size: var(--s-lead); font-weight: 500; font-variant-numeric: lining-nums tabular-nums; letter-spacing: -0.01em; }
+.tl-bar i { grid-column: 2; grid-row: 1; display: block; height: 22px; margin-left: calc(var(--l) * 100%); width: max(3px, calc(var(--w) * 100%)); background: var(--red); transform-origin: 0 50%; }
+.tl-neg i { background: var(--pink); transform-origin: 100% 50%; }
+
+/* ---------- seasons ---------- */
+.tl-panel .tl-band { margin-top: 4px; }
+
+/* ---------- the index ---------- */
+.tl-index { padding: 0 var(--m); }
+.tl-list { margin-top: 24px; }
+.tl-list .ex-p { display: grid; gap: 6px; }
+.tl-ask { font-weight: 600; }
+.tl-ny-list { list-style: none; margin: 4px 0 0; padding: 0; }
+.tl-notyet { display: grid; gap: 14px; padding: 30px 24px; background: var(--stone-2); }
+.tl-ny-head { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; }
+.tl-ny-tag { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; background: var(--ink); color: var(--paper); padding: 4px 10px; }
+.tl-notyet p { max-width: 70ch; line-height: 1.5; }
+.tl-notyet .fd-how { margin-top: 0; }
+.tl-index .tl-advice { margin-top: 32px; }
+.tl-sec .fd-how { margin-top: 0; max-width: 72ch; }
+
+@media (max-width: 900px) {
+  .tl-work { grid-template-columns: minmax(0, 1fr); }
+  .tl-go-wrap { grid-column: 1; }
+  .tl-orow { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .tl-brow { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .tl-js .tl-two .tl-cells { grid-template-columns: minmax(0, 1fr); }
+  .tl-js .tl-two .tl-cell:nth-child(n) { padding-top: 0; }
+  .tl-two .tl-ohead { display: none; }
+  .tl-two .tl-cell::before { content: attr(data-sro); display: block; font-size: .75rem; font-weight: 600; letter-spacing: .06em; color: var(--soft); }
+  .tl-tbl th, .tl-tbl td { padding: 10px; }
+}
+
+/* ---------- calm motion: a result settles in; a window's bars grow from zero ---------- */
+@keyframes tl-in { from { opacity: .3; } to { opacity: 1; } }
+.tl-anim .tl-tick { animation: tl-in .45s ease; }
+.tl-anim .tl-bar i { transition: transform .8s var(--ease); }
+.tl-anim .tl-panel:not(.go) .tl-bar i { transform: scaleX(0); }
+@media (prefers-reduced-motion: reduce) {
+  .tl-tick { animation: none !important; }
+  .tl-bar i { transition: none !important; transform: none !important; }
+  .tl-opt span { transition: none; }
+}
+
+/* what the field was read as, so ₹75,00,000 typed with "lakh" pressed cannot pass unseen */
+.tl-field small.tl-echo { color: var(--ink); font-weight: 600; }
+.tl-echo:empty { display: none; }

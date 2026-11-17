@@ -1,0 +1,121 @@
+/* The Real Estate Paper: the playbook. The jewellery playbook's two-column case page (jewel.css, ".jw-pb"), rebuilt on
+   this site's shared classes: the header (.ph), the steps (.cs-list, whose sheets slide under .m3), the sum table (.pt,
+   whose rows add up under .m3). Flat colour only: no borders, no lines, no shadows. New motion sits under .m3, which
+   v2.js sets only when motion is welcome, so with reduced motion or no script every block is simply finished. */
+
+/* ---------- the header: the question on clay, the short answer on blush ---------- */
+.pb-ph { min-height: min(62svh, 620px); }
+.pb-ph .ph-h { max-width: 20ch; }
+.pb-ph .ph-cap { max-width: 34ch; }
+.ph-k { display: block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); }
+.pb-ph-index { min-height: min(56svh, 560px); }
+.pb-ph-index .ph-h { font-size: var(--s-display-s); }
+.pb-ph-index .ph-sub { margin-top: 14px; }
+.pb-ph-index .ph-cap { max-width: 40ch; font-size: var(--s-body); line-height: 1.5; }
+.pb-ph b.n, .pb-ph-index b.n { font-weight: 600; }
+
+/* ---------- the case: two columns, the heading left and its body right ---------- */
+.re-pb { padding: 0 var(--m); }
+.re-pb .pb-intro, .re-pb .pb-section { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px clamp(32px, 5vw, 88px); align-items: start; }
+.re-pb .pb-intro { margin-top: clamp(40px, 5vw, 72px); }
+.re-pb .pb-section { margin-top: clamp(56px, 7vw, 104px); }
+.re-pb .pb-section > h2 { font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem); line-height: 1.05; letter-spacing: -0.03em; }
+.re-pb .pb-body { min-width: 0; display: grid; gap: 16px; align-content: start; }
+.re-pb p, .re-pb li { max-width: 68ch; }
+.pb-lede { font-size: var(--s-lead); line-height: 1.32; max-width: 42ch; }
+.figure-box { background: var(--blush); padding: clamp(20px, 3vw, 36px); }
+.figure-box p { font-size: var(--s-lead); line-height: 1.3; }
+.figure-box p.pb-k { font-size: .75rem; }
+.pb-k { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin-bottom: 8px; }
+@media (max-width: 900px) { .re-pb .pb-intro, .re-pb .pb-section { grid-template-columns: 1fr; } }
+
+/* the sum: rows on a flat ground, no rules between them; the last row is the answer */
+.pb-tw { overflow-x: auto; }
+.re-pb .pb-sum { font-size: var(--s-body); }
+.re-pb .pb-sum thead th { background: var(--stone-2); font-size: var(--s-small); }
+.re-pb .pb-sum tbody tr + tr > * { border-top: 0; }
+.re-pb .pb-sum tbody tr:nth-child(odd) { background: var(--paper); }
+.re-pb .pb-sum tbody tr:nth-child(even) { background: var(--stone); }
+.re-pb .pb-sum th[scope="row"] { font-weight: 400; line-height: 1.4; }
+.re-pb .pb-sum td { font-variant-numeric: lining-nums tabular-nums; white-space: normal; min-width: 9ch; }
+.re-pb .pb-sum td b.n { font-weight: 600; white-space: nowrap; }
+.re-pb .pb-sum tr.pb-total > * { background: var(--pink); font-weight: 600; }
+.re-pb .pb-sum tr.pb-total th[scope="row"] { font-weight: 600; }
+.pb-note { font-size: var(--s-small); color: var(--soft); line-height: 1.5; }
+@media (max-width: 560px) {
+  .re-pb .pb-sum thead { display: none; }
+  .re-pb .pb-sum tr { display: grid; gap: 2px; padding: 10px 14px; }
+  .re-pb .pb-sum th, .re-pb .pb-sum td { padding: 0; }
+  .re-pb .pb-sum td { font-size: var(--s-lead); }
+  .re-pb .pb-sum tr.pb-total { background: var(--pink); }
+  .re-pb .pb-sum tr.pb-total > * { background: none; }
+}
+
+/* the chart under the sum */
+.pb-fig { display: grid; gap: 8px; margin-top: 16px; }
+.pb-fig-h { font-size: var(--s-lead); line-height: 1.22; letter-spacing: -0.01em; }
+.pb-fig-t { font-size: var(--s-small); line-height: 1.5; }
+.pb-chartbox { margin: 10px 0 0; max-width: 640px; }
+.pb-src { font-size: var(--s-small); color: var(--soft); line-height: 1.45; }
+.pb-pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.pb-chart-k { font-size: var(--s-small); font-weight: 600; margin-bottom: 6px; }
+/* charts drawn in the names-above layout show on every width: the wide copy until phones, then the narrow one */
+@media (max-width: 600px) { .pb-chartbox .chart.pb-chart { display: none; } }
+.pb-chartbox .bandv { padding: clamp(16px, 2.6vw, 32px) 0; }
+
+/* every step: the shared step sheets, full width */
+.pb-steps { margin-top: clamp(56px, 7vw, 104px); }
+.pb-steps > h2 { font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 24px; }
+.pb-count { display: block; margin-top: 6px; font-size: var(--s-small); font-weight: 400; letter-spacing: 0; color: var(--soft); }
+.pb-steps .cs-step { padding-left: clamp(16px, 2.4vw, 32px); padding-right: clamp(16px, 2.4vw, 32px); }
+.pb-steps .cs-body p { max-width: 68ch; }
+.pb-an { font-size: var(--s-small); color: var(--soft); line-height: 1.5; }
+.pb-an span { display: inline-block; margin-right: 8px; font-size: .6875rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+@media (max-width: 700px) { .pb-steps .cs-step { grid-template-columns: 1fr; gap: 6px; } .pb-steps .cs-num { font-size: clamp(2rem, 9vw, 2.6rem); } }
+
+/* what it tells you, and what it does not */
+.pb-two { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.pb-two > div { padding: clamp(18px, 2.4vw, 28px); }
+.pb-yes { background: var(--blush); } .pb-no { background: var(--stone); }
+.pb-list { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+.pb-small { font-size: var(--s-small); line-height: 1.5; }
+
+/* the tool and the findings: flat rows to click */
+.pb-tools, .pb-finds { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.pb-tools a, .pb-finds a { display: grid; gap: 4px; padding: 18px 22px; background: var(--stone); text-decoration: none; transition: background-color .25s ease; }
+.pb-tools li:nth-child(odd) a { background: var(--blush); }
+.pb-tools a:hover, .pb-finds a:hover { background: var(--pink); }
+.pb-tool-n { font-size: var(--s-lead); font-weight: 500; line-height: 1.2; }
+.pb-tool-w { font-size: var(--s-small); line-height: 1.45; }
+.pb-tools .re-go { min-height: 0; margin-top: 4px; }
+.pb-finds a { display: block; line-height: 1.4; }
+
+/* three things to do this week: big numbers on blush */
+.pb-three { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; counter-reset: pb; }
+.pb-three li { counter-increment: pb; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: baseline; padding: clamp(18px, 2.4vw, 28px); background: var(--blush); max-width: none; }
+.pb-three li::before { content: counter(pb); font-size: var(--s-head); line-height: .8; letter-spacing: -0.04em; font-variant-numeric: lining-nums; color: var(--red); }
+.pb-three li:nth-child(2) { background: var(--stone); }
+
+/* the tests, closed until asked for */
+.pb-disc > summary { cursor: pointer; font-weight: 600; list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
+.pb-disc > summary::-webkit-details-marker { display: none; }
+.pb-disc > summary::after { content: "+"; font-weight: 400; font-size: 1.2em; transition: transform .3s var(--ease); }
+.pb-disc[open] > summary::after { transform: rotate(45deg); }
+.pb-disc .disc-body { display: grid; gap: 12px; padding-top: 8px; font-size: var(--s-small); line-height: 1.5; }
+
+.pb-pn { margin-top: clamp(64px, 8vw, 112px); }
+
+/* ---------- the front page: six questions, filtered by what the reader is doing ---------- */
+.pb-index { padding-top: clamp(40px, 5vw, 72px); }
+.pb-filter { margin: 0 0 24px; }
+.pb-index .pi-list .best-name { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: baseline; }
+.pb-tags { display: block; margin-top: 8px; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); }
+.pb-index li[hidden] { display: none; }
+
+/* ---------- motion, only under .m3: the short answer settles in after the question ---------- */
+.m3 .pb-ph .ph-fig > * { animation: m3-rise .7s var(--ease) both; }
+.m3 .pb-ph .ph-fig > :nth-child(2) { animation-delay: .12s; }
+.m3 .pb-three li::before { transition: transform .6s var(--ease); }
+.m3 .pb-three.pb-go li::before { animation: pb-count .7s var(--ease) both; animation-delay: calc(var(--i, 0) * 140ms); }
+@keyframes pb-count { from { opacity: 0; transform: translateY(40%); } }
+@media (prefers-reduced-motion: reduce) { .pb-tools a, .pb-finds a { transition: none; } }

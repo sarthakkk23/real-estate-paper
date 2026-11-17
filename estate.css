@@ -1,0 +1,334 @@
+/* The Real Estate Paper: the few additions to the shared stylesheet (v2.css, copied unchanged from the jewellery site).
+   Land is the motif: flat blocks of colour read as plots in a scheme, and the gaps between them do the work a line would.
+   No borders, no shadows, no lines. New motion sits under .m3 (set by v2.js only when motion is welcome), so with reduced
+   motion or no script every block below is simply in its finished state. */
+
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.dev-miss { background: var(--red); color: var(--paper); font: 600 .8em/1.2 ui-monospace, Menlo, monospace; padding: 0 .3em; letter-spacing: 0; }
+.dev-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; margin: 0; max-width: none; padding: 6px var(--m); background: var(--red); color: var(--paper); font-size: var(--s-small); }
+
+/* ---------- the bar: Tools is the one action, one click from anywhere ---------- */
+.re-tools-btn[aria-current] { background: var(--red); }
+@media (max-width: 1080px) { .re-tools-btn { margin-left: 0; } .bar .menu { margin-left: auto; } }
+
+/* ---------- the hero: the photograph, the statement and L1's two numbers ---------- */
+.re-copy { gap: 22px; }
+.re-hero-obj .hero-copy { background: var(--clay); }
+.re-hero-obj { grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); }
+.re-copy .hero-sub { font-size: var(--s-body); line-height: 1.45; max-width: 46ch; }
+/* the family row sits above the footer that waits under the page (v2's "lifts off its footer") */
+.family { position: relative; z-index: 3; }
+.re-obj { display: grid; align-items: center; }
+.js .hero.is-in .hero-copy > :nth-child(4) { transition-delay: .45s; }
+/* the photograph hero: the jewellery site's, the copy over the photo's left side */
+.re-hero-photo { grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy"; }
+.re-hero-photo .hero-pic picture { top: 0; height: 100%; }
+.re-hero-photo .hero-pic img { object-position: 50% 45%; }
+@media (min-width: 901px) { .re-hero-photo .hero-pic::after { background: linear-gradient(90deg, rgba(74, 26, 20, .82) 0%, rgba(74, 26, 20, .76) 58%, rgba(74, 26, 20, .3) 100%); } }
+.re-hero-photo .hero-copy { max-width: 980px; }
+
+/* two numbers side by side, each with its label and its limit under it; never a ratio between them */
+.re-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px clamp(20px, 3vw, 48px); align-items: start; }
+.re-fig { display: grid; gap: 8px; align-content: start; }
+.re-num { font-size: clamp(3rem, 1.4rem + 4.4vw, 6.25rem); line-height: .85; letter-spacing: -0.055em; font-weight: 500; font-variant-numeric: lining-nums; white-space: nowrap; }
+.re-num small { font-size: .38em; letter-spacing: 0; margin-left: .04em; vertical-align: top; position: relative; top: .12em; }
+.re-num-long { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.5rem); white-space: normal; letter-spacing: -0.03em; line-height: 1; }
+.re-lab { font-weight: 600; line-height: 1.3; max-width: 30ch; }
+.re-cav { font-size: var(--s-small); line-height: 1.45; color: var(--soft); max-width: 40ch; }
+.hero .re-cav { color: var(--blush); }
+.re-hero-photo .re-cav { color: #fbf3ee; }
+.re-l8 { max-width: 52ch; }
+.re-l8 a { color: inherit; font-weight: 600; }
+.hero-copy .re-num .dev-miss { font-size: .3em; vertical-align: middle; }
+@media (max-width: 900px) {
+  .re-hero-obj { grid-template-columns: 1fr; }
+  .re-hero-obj .hero-obj { height: auto; min-height: 0; }
+}
+@media (max-width: 420px) { .re-two { gap: 16px; } .re-num { font-size: clamp(2.6rem, 13vw, 3.6rem); } }
+
+/* ---------- plots: one column a year, as wide as the land JDA auctioned that year; the fill is the price level ---------- */
+.plots { display: grid; gap: 10px; padding: clamp(20px, 3.4vw, 52px); width: 100%; }
+.pl-row { display: grid; gap: 8px; }
+.pl-name { font-size: var(--s-small); font-weight: 600; }
+.pl-lots { display: flex; gap: 6px; height: clamp(120px, 22svh, 230px); }
+.pl-lot { flex: var(--g) 1 0; min-width: 24px; position: relative; background: var(--paper); overflow: hidden; container-type: inline-size; }
+.pl-lot i { position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--f) * (100% - 24px)); background: var(--red); transform-origin: 50% 100%; }
+.pl-homes .pl-lot i { background: var(--pink); }
+.pl-lot b { position: absolute; left: 6px; top: 4px; font-size: .75rem; font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+.pl-ys { display: none; }
+@container (max-width: 44px) { .pl-y { display: none; } .pl-ys { display: inline; } }
+.pl-road { height: clamp(8px, 1.6svh, 18px); }
+.pl-key { font-size: var(--s-small); color: var(--soft); max-width: 60ch; margin-top: 10px; line-height: 1.45; }
+@media (max-width: 640px) { .pl-y { display: none; } .pl-ys { display: inline; } .pl-lot b { left: 3px; font-size: .6875rem; } .pl-lots { gap: 4px; height: 120px; } }
+.m3 .plots .pl-lot i { transform: scaleY(0); transition: transform 1.1s var(--ease); transition-delay: calc(var(--k) * 260ms + 150ms); }
+.m3 .plots.go .pl-lot i { transform: none; }
+
+/* ---------- zones: JDA's zones 1 to 14 as tiles in number order; tinted only where a checked figure exists ---------- */
+.zones { display: grid; gap: 14px; padding: clamp(20px, 3.4vw, 52px); width: 100%; }
+.zn-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.zn { aspect-ratio: 1; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(6px, .8vw, 12px); background: var(--paper);
+  color: var(--soft); text-decoration: none; transition: background-color .25s ease, opacity .6s ease, transform .6s var(--ease); }
+.zn-n { font-size: clamp(1rem, .7rem + 1vw, 1.75rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+.zn-v { font-size: clamp(.6875rem, .55rem + .45vw, .9375rem); font-weight: 600; line-height: 1.1; }
+a.zn { color: var(--ink); }
+.zn-hot { background: var(--red); color: var(--paper) !important; }
+.zn-out { background: var(--pink); }
+.zn-cen { background: var(--stone-2); }
+@media (hover: hover) and (pointer: fine) { a.zn:hover { background: var(--ink); color: var(--paper); } }
+.zn-share { position: relative; height: 14px; background: var(--paper); }
+.zn-share { margin-bottom: 22px; }
+.zn-y { position: absolute; top: calc(100% + 4px); font-size: .75rem; font-weight: 600; transform: translateX(-100%); padding-right: 4px; }
+.zn-ya { left: calc(var(--a) * 100%); } .zn-yb { left: calc(var(--b) * 100%); }
+.zn-share i { position: absolute; top: 0; bottom: 0; transform-origin: 0 50%; }
+.zn-a { left: 0; width: calc(var(--a) * 100%); background: var(--pink); }
+.zn-b { left: calc(var(--a) * 100%); width: calc((var(--b) - var(--a)) * 100%); background: var(--clay); }
+.zn-key { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: var(--s-small); line-height: 1.4; }
+.zn-key li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 10px; align-items: start; }
+.sw { width: 14px; height: 14px; margin-top: 3px; display: block; }
+.sw-hot { background: var(--red); } .sw-out { background: var(--pink); } .sw-cen { background: var(--stone-2); }
+@media (max-width: 640px) { .zn-v { display: none; } }
+.m3 .zones .zn { opacity: 0; transform: translateY(10px); transition-delay: calc(var(--k) * 45ms); }
+.m3 .zones.go .zn { opacity: 1; transform: none; }
+.m3 .zones .zn-b { transform: scaleX(0); transition: transform 1.2s var(--ease) .9s; }
+.m3 .zones.go .zn-b { transform: none; }
+
+.re-exact { font-size: var(--s-small); font-weight: 600; font-variant-numeric: lining-nums; }
+.re-eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--blush); }
+.re-l8-m { display: none; }
+@media (max-width: 640px) {
+  /* one screen on a phone: the statement and the two numbers with their limits; the rest follows under the photograph */
+  .re-hero-photo { min-height: 0; }
+  .re-hero-photo .hero-sub, .re-hero-photo .re-l8, .re-hero-photo .hero-meta, .re-hero-photo .btn-ghost { display: none; }
+  .re-hero-photo .hero-copy { gap: 18px; padding-top: 20px; padding-bottom: 22px; }
+  .re-hero-photo .hero-h { font-size: clamp(2rem, 9.4vw, 2.6rem); }
+  .re-hero-photo .re-two { gap: 14px; }
+  .re-hero-photo .re-num { font-size: clamp(2.4rem, 12vw, 3.2rem); }
+  .re-hero-photo .re-lab { font-size: .9375rem; }
+  .re-hero-photo .re-cav, .re-hero-photo .re-exact { font-size: .8125rem; line-height: 1.35; }
+  .re-l8-m { display: block; padding: 28px var(--m) 0; max-width: 52ch; font-size: var(--s-body); line-height: 1.45; }
+  .re-l8-m a { color: inherit; font-weight: 600; }
+}
+
+/* ---------- visuals: full-width figures on a finding's page ---------- */
+.re-vis { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px clamp(32px, 5vw, 88px); padding: clamp(56px, 7vw, 104px) var(--m) 0; align-items: start; }
+.re-vis-text { display: grid; gap: 14px; }
+.re-vis-fig { min-width: 0; }
+.re-vis-src { grid-column: 2; }
+@media (max-width: 900px) { .re-vis { grid-template-columns: 1fr; } .re-vis-src { grid-column: 1; } }
+.re-vis .plots .pl-lots { height: clamp(140px, 24vw, 240px); }
+
+/* L2: plots that grow band by band; the fill is the rate per sq m against the base plot */
+.sizes { display: grid; gap: 28px; }
+.sz-name { font-size: var(--s-small); font-weight: 600; margin-bottom: 10px; }
+.sz-lots { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; align-items: end; }
+.sz-lot { display: grid; gap: 6px; align-content: end; }
+.sz-plot { display: block; position: relative; width: calc(var(--s) * 100%); aspect-ratio: 1; background: var(--stone); overflow: hidden; }
+.sz-plot i { position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--f) * 100%); background: var(--pink); transform-origin: 50% 100%; }
+.sizes .sz-row:first-child .sz-plot i { background: var(--red); }
+.sz-base .sz-plot i { background: var(--ink) !important; }
+.sz-few .sz-plot i { background: var(--blush) !important; }
+.sz-v { font-size: var(--s-small); font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+.sz-b { font-size: .75rem; line-height: 1.3; color: var(--soft); }
+@media (max-width: 560px) {
+  /* a phone: one band per row (square, figure, size in sq m and sq yd), so the labels have room */
+  .sz-lots { grid-template-columns: 1fr; gap: 8px; }
+  .sz-lot { grid-template-columns: 56px 72px minmax(0, 1fr); align-items: center; gap: 12px; }
+  .sz-plot { align-self: center; }
+  .sz-v { font-size: .875rem; }
+  .sz-b { font-size: .8125rem; }
+}
+.m3 .sizes .sz-plot { transform: scale(.25); transform-origin: 0 100%; transition: transform .9s var(--ease); transition-delay: calc(var(--k) * 180ms); }
+.m3 .sizes .sz-plot i { transform: scaleY(1.4); transition: transform .9s var(--ease); transition-delay: calc(var(--k) * 180ms + 250ms); }
+.m3 .sizes.go .sz-plot, .m3 .sizes.go .sz-plot i { transform: none; }
+
+/* L3: the band round a comparable, opening out from the comparable's own rate */
+.bandv { display: grid; gap: 22px; }
+.bv-row { display: grid; gap: 8px; }
+.bv-name { font-size: var(--s-small); font-weight: 600; }
+.bv-track { position: relative; height: 28px; background: var(--stone); }
+.bv-b { position: absolute; top: 0; bottom: 0; left: calc(var(--l) * 100%); width: calc((var(--r) - var(--l)) * 100%); background: var(--pink); transform-origin: calc(var(--z) * 100%) 50%; }
+.bv-row:first-child .bv-b { background: var(--red); }
+.bv-c { position: absolute; top: -6px; bottom: -6px; left: calc(var(--c) * 100% - 3px); width: 6px; background: var(--ink); }
+.bv-v { font-size: var(--s-lead); font-weight: 500; font-variant-numeric: lining-nums; }
+.bv-mid { font-size: .75rem; color: var(--soft); margin-left: calc(var(--c) * 100%); transform: translateX(-50%); white-space: nowrap; width: max-content; }
+.m3 .bandv .bv-b { transform: scaleX(0); transition: transform 1.2s var(--ease); transition-delay: calc(var(--k) * 700ms + 200ms); }
+.m3 .bandv.go .bv-b { transform: none; }
+
+/* L5: published measures as dots on one scale; with motion they start together at no change and move apart */
+.dots { display: grid; gap: 10px; }
+.dv-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; position: relative; }
+.dv-list li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 12px; align-items: center; }
+.dv-name { font-size: var(--s-small); line-height: 1.3; }
+.dv-track { position: relative; height: 40px; background: var(--stone); }
+.dv-track::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--z) * 100% - 1px); width: 2px; background: var(--stone-2); }
+.dv-dot { position: absolute; top: 50%; left: calc(var(--x) * 100%); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--red); }
+.dv-dot span { position: absolute; top: -2px; left: 22px; font-size: var(--s-small); font-weight: 600; white-space: nowrap; font-variant-numeric: lining-nums; }
+.dv-list li:nth-last-child(-n+2) .dv-dot span { left: auto; right: 22px; }
+.dv-zero { font-size: .75rem; color: var(--soft); margin-left: calc(40% + 12px); }
+@media (max-width: 560px) { .dv-list li { grid-template-columns: 1fr; gap: 4px; } .dv-zero { margin-left: 0; } }
+.m3 .dots .dv-dot { left: calc(var(--z) * 100%); transition: left 1.3s var(--ease); transition-delay: calc(var(--k) * 120ms + 500ms); }
+.m3 .dots.go .dv-dot { left: calc(var(--x) * 100%); }
+
+/* the tests behind a finding: set apart, for analysts */
+.re-tests { background: var(--stone); padding-bottom: clamp(56px, 7vw, 96px); margin-top: clamp(64px, 8vw, 120px); }
+.re-tests .re-list li { background: var(--paper); }
+.re-tests .re-list li:nth-child(odd) { background: var(--blush); }
+.re-sec-lede { max-width: 60ch; }
+.re-second { display: grid; gap: 18px; }
+.re-second .re-two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.re-second .re-num { font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.75rem); white-space: normal; }
+@media (max-width: 560px) { .re-second .re-two { grid-template-columns: 1fr; } }
+.re-how-more { margin-top: 10px; }
+
+/* ---------- the home page ---------- */
+.re-intro { padding-bottom: 0; }
+.re-cards { padding: clamp(80px, 10vw, 150px) var(--m) 0; }
+.re-cards .ch-head { margin-bottom: 40px; }
+.re-lots { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.re-card { display: grid; gap: 14px; align-content: start; padding: clamp(24px, 3vw, 44px); background: var(--blush); }
+.re-card:nth-child(1) { grid-column: span 7; }
+.re-card:nth-child(2) { grid-column: span 5; background: var(--stone); }
+.re-card:nth-child(3) { grid-column: span 5; background: var(--stone); }
+.re-card:nth-child(4) { grid-column: span 7; }
+.re-card .fd-num { margin-top: 10px; }
+.re-card .re-num-long { font-size: clamp(2.2rem, 1.2rem + 2.8vw, 3.75rem); }
+.re-card-h { font-size: var(--s-lead); line-height: 1.22; letter-spacing: -0.01em; max-width: 30ch; }
+.re-card .fd-body { margin: 0; }
+.re-card .fd-how { margin-top: 0; }
+@media (max-width: 900px) { .re-card:nth-child(n) { grid-column: 1 / -1; } }
+.re-use { font-size: var(--s-small); line-height: 1.45; max-width: 52ch; }
+.re-use span, .re-limit span, .re-so span, .re-second span { display: block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin-bottom: 4px; font-style: normal; }
+.re-limit { font-size: inherit; font-style: normal; color: var(--ink); max-width: 60ch; }   /* the limit at full body weight: never hidden in faint type */
+.re-go { font-weight: 600; text-decoration: none; justify-self: start; min-height: 44px; display: inline-flex; align-items: center; }
+.re-go::after { content: " \2192"; white-space: pre; display: inline-block; transition: transform .3s var(--ease); }
+.re-go:hover { color: var(--red); }
+@media (hover: hover) and (pointer: fine) { .re-go:hover::after { transform: translateX(6px); } }
+.re-more { margin-top: 32px; }
+.re-tools { padding-bottom: 0; }
+.re-rules { padding: clamp(72px, 9vw, 120px) var(--m); }
+.re-rules { background: var(--stone); }
+.re-rules p { font-size: var(--s-lead); line-height: 1.3; max-width: 46ch; }
+.re-k { display: block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin-bottom: 10px; }
+
+/* ---------- a finding's own page: three depths, never forced ---------- */
+.re-crumb { padding: 20px var(--m) 0; font-size: var(--s-small); color: var(--soft); }
+.re-crumb a { color: inherit; }
+.re-crumb [aria-current] { color: var(--ink); font-weight: 600; }
+.re-fhead { padding: clamp(40px, 6vw, 96px) var(--m) clamp(32px, 4vw, 56px); display: grid; gap: 20px; }
+.re-fhead .ph-eyebrow { color: var(--soft); }
+.re-fhead h1 { font-size: var(--s-display-s); letter-spacing: -0.04em; line-height: .95; max-width: 18ch; }
+.re-use-big { font-size: var(--s-lead); line-height: 1.3; max-width: 46ch; margin-top: 8px; }
+.re-use-big span { font-size: .5em; }
+.re-d1 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px clamp(32px, 5vw, 88px); padding: clamp(32px, 4vw, 64px) var(--m);
+  background: var(--blush); align-items: start; }
+.re-d1 .re-two { grid-template-columns: 1fr; gap: 40px; }
+.re-d1-text { display: grid; gap: 22px; }
+.re-headline { font-size: var(--s-lead); line-height: 1.3; letter-spacing: -0.01em; max-width: 44ch; }
+.re-so { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.re-so p, .re-second { max-width: 46ch; }
+.re-how { margin-top: 0; }
+@media (max-width: 900px) { .re-d1 { grid-template-columns: 1fr; } .re-d1 .re-two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+@media (max-width: 560px) { .re-so { grid-template-columns: 1fr; } .re-d1 .re-two { grid-template-columns: 1fr; } }
+.re-deep { padding-top: clamp(48px, 6vw, 96px); }
+.re-chart-h { margin-top: 0; }
+.re-deep .fd-grade { line-height: 1.45; }
+.re-deep .fd-chart { min-width: 0; }
+.re-cap { font-style: normal; }
+.re-sec { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px clamp(32px, 5vw, 88px); padding: clamp(64px, 8vw, 120px) var(--m) 0; align-items: start; }
+.re-sec > h2 { font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem); }
+.re-sec-b { min-width: 0; display: grid; gap: 16px; }
+@media (max-width: 900px) { .re-sec { grid-template-columns: 1fr; } }
+.re-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.re-list li { padding: 18px 22px; background: var(--stone); line-height: 1.5; }
+.re-list li:nth-child(odd) { background: var(--blush); }
+.re-dl { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.re-dl li { display: grid; gap: 4px; padding: 16px 20px; background: var(--stone); }
+.re-dl a { font-weight: 600; overflow-wrap: anywhere; }
+.re-dl span { font-size: var(--s-small); color: var(--soft); }
+.re-tbl { overflow-x: auto; }
+.re-tbl table { border-collapse: collapse; width: 100%; font-size: var(--s-small); }
+.re-tbl th, .re-tbl td { text-align: left; padding: 10px 14px; vertical-align: top; }
+.re-tbl thead th { background: var(--stone-2); font-weight: 600; }
+.re-tbl tbody tr:nth-child(even) { background: var(--stone); }
+.re-tbl td:first-child { font-weight: 600; white-space: nowrap; font-variant-numeric: lining-nums tabular-nums; }
+.re-pn { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); margin-top: clamp(64px, 8vw, 112px); }
+.re-pn a { display: grid; gap: 4px; padding: 32px var(--m); background: var(--stone); text-decoration: none; font-size: var(--s-lead); font-weight: 500; line-height: 1.2; transition: background-color .25s ease; }
+.re-pn a span { font-size: var(--s-small); color: var(--soft); font-weight: 400; }
+.re-pn .re-pn-n { text-align: right; background: var(--blush); }
+.re-pn a:hover { background: var(--pink); }
+@media (max-width: 640px) { .re-pn { grid-template-columns: 1fr; } .re-pn .re-pn-n { text-align: left; } }
+
+/* ---------- insights: filter by what the reader is doing ---------- */
+.re-filter { display: none; grid-column: 1 / -1; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 16px; }
+.re-js .re-filter { display: flex; }
+.re-filter p { font-size: var(--s-small); font-weight: 600; margin-right: 8px; }
+.re-chip { font: inherit; font-size: var(--s-small); min-height: 40px; padding: 0 14px; border: 0; background: var(--stone); color: var(--ink); cursor: pointer; transition: background-color .2s ease; }
+.re-chip:hover { background: var(--pink); }
+.re-chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.re-chap { padding: clamp(48px, 6vw, 88px) var(--m) 0; }
+.re-chap h2 { font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem); }
+.re-chap[hidden], .re-flist li[hidden] { display: none; }
+.re-flist { margin-top: 24px; }
+.re-id { display: inline-block; margin-right: 12px; font-size: var(--s-small); font-weight: 600; color: var(--red); }
+.re-coming { padding: 40px var(--m) 0; color: var(--soft); }
+.re-leads .ch-head { margin-bottom: 28px; }
+.re-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.re-nos .re-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.re-tile { display: grid; gap: 12px; align-content: start; padding: clamp(22px, 2.6vw, 36px); background: var(--blush); }
+.re-tile:nth-child(even) { background: var(--stone); }
+.re-nos .re-tile { background: var(--stone-2); }
+.re-tile .re-id { margin: 0; }
+.re-tile-h { font-size: var(--s-lead); line-height: 1.22; letter-spacing: -0.01em; }
+.re-tile .fd-num { margin-top: 6px; }
+.re-tile .re-num-long { font-size: clamp(1.75rem, 1.1rem + 1.8vw, 2.75rem); }
+.re-tile[hidden] { display: none; }
+.re-soon { font-size: var(--s-small); color: var(--soft); }
+@media (max-width: 1000px) { .re-tiles, .re-nos .re-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .re-tiles, .re-nos .re-tiles { grid-template-columns: 1fr; } }
+.re-zones { padding: clamp(64px, 8vw, 112px) var(--m) 0; display: grid; gap: 24px; }
+.re-zones .zones { max-width: 760px; display: grid; gap: 16px; }
+.re-flist a, .re-flist .re-row-off { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr) minmax(0, 1.4fr) auto; align-items: baseline; gap: 24px; padding: 28px 24px; }
+.re-flist .re-row-off { background: var(--stone); }
+.re-flist li:nth-child(odd) .re-row-off { background: var(--paper); }
+.re-flist .re-toolrow a { grid-template-columns: minmax(0, 1fr) auto; }
+@media (max-width: 760px) { .re-flist a, .re-flist .re-row-off { grid-template-columns: 1fr; gap: 6px; padding: 20px 16px; } }
+.re-row-off .best-go { color: var(--soft); }
+.re-row-use { font-size: var(--s-small); line-height: 1.45; color: var(--soft); }
+.re-row-use i { font-style: normal; font-weight: 600; color: var(--ink); }
+@media (min-width: 761px) {
+  .re-flist li:not(.re-toolrow) > :is(a, .re-row-off) { row-gap: 10px; }
+  .re-flist li:not(.re-toolrow) .best-name { grid-column: 1; grid-row: 1; }
+  .re-flist .re-row-use { grid-column: 1; grid-row: 2; }
+  .re-flist li:not(.re-toolrow) .ex-p:not(.re-row-use):not(.re-row-lim) { grid-column: 2; grid-row: 1 / span 2; }
+  .re-flist .re-row-lim { grid-column: 3; grid-row: 1 / span 2; }
+  .re-flist li:not(.re-toolrow) .best-go { grid-column: 4; grid-row: 1 / span 2; }
+}
+.re-row-n { font-weight: 600; font-variant-numeric: lining-nums; }
+.re-row-lim { font-style: normal; color: var(--ink); }
+.re-row-lim b { font-weight: 600; }
+.re-toolrow .re-id { color: var(--soft); }
+.re-ix-tests { margin-top: clamp(64px, 8vw, 112px); }
+
+/* the hero's figures roll in digit by digit (the third pass's roll, for figures that do not rotate) */
+.re-num .rc { line-height: inherit; }
+
+/* four sites in the family row: on a phone they tighten a little so this one, the last, stays in view */
+@media (max-width: 420px) { .family { gap: 4px; padding-inline: 12px; } .family a { padding: 0 8px; font-size: .75rem; } }
+
+/* with reduced motion, charts are simply drawn: no trace, no growth, no fade (v2 still eases these in) */
+@media (prefers-reduced-motion: reduce) {
+  .chart .draw, .chart .grow, .chart .grow-y, .chart .fade, .chart .pop { transition: none !important; }
+  .re-go::after, .re-pn a, .zn { transition: none; }
+}
+
+/* Home hero on a laptop screen (about 1280 by 800): the whole hero, buttons included, fits below the bar. Wider text
+   measures and a slightly smaller headline take lines out; nothing is hidden. */
+@media (min-width: 901px) and (max-height: 920px) {
+  .re-hero-photo { min-height: calc(100svh - var(--bar-h) - 44px); }
+  .re-hero-photo .hero-copy { gap: 14px; padding-top: 18px; padding-bottom: 20px; max-width: 1060px; }
+  .re-hero-photo .hero-h { font-size: clamp(2.4rem, 3.4vw, 2.8rem); max-width: 26ch; }
+  .re-hero-photo .hero-sub { max-width: 68ch; font-size: 1.0625rem; }
+  .re-hero-photo .re-num { font-size: clamp(3.2rem, 4.6vw, 4rem); }
+  .re-hero-photo .re-lab { font-size: 1.0625rem; }
+  .re-hero-photo .re-l8 { max-width: 84ch; font-size: 1rem; line-height: 1.5; }
+}

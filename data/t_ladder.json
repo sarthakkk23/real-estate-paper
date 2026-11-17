@@ -1,0 +1,58 @@
+{
+ "built": "2026-11-17",
+ "read": "2026-11-13",
+ "offices": 27,
+ "offices_key": "s1_offices",
+ "bands": [
+  {
+   "id": "up to 40",
+   "m": 1.0,
+   "base": true
+  },
+  {
+   "id": "41-60",
+   "m": 1.1,
+   "m_com": 1.1,
+   "share_res_pct": 99.94511525795828,
+   "share_com_pct": 100.0,
+   "key": "st_dlc_l41",
+   "key_com": "st_dlc_l41_com",
+   "share_res_key": "st_dlc_l41_sres",
+   "share_com_key": "st_dlc_l41_scom"
+  },
+  {
+   "id": "61-99",
+   "m": 1.15,
+   "m_com": 1.15,
+   "share_res_pct": 99.52882483370288,
+   "share_com_pct": 100.0,
+   "key": "st_dlc_l61",
+   "key_com": "st_dlc_l61_com",
+   "share_res_key": "st_dlc_l61_sres",
+   "share_com_key": "st_dlc_l61_scom"
+  },
+  {
+   "id": "100 and over",
+   "m": 1.2,
+   "m_com": 1.2,
+   "share_res_pct": 100.0,
+   "share_com_pct": 100.0,
+   "key": "st_dlc_l100",
+   "key_com": "st_dlc_l100_com",
+   "share_res_key": "st_dlc_l100_sres",
+   "share_com_key": "st_dlc_l100_scom"
+  }
+ ],
+ "interior": {
+  "median": 0.833,
+  "p10": 0.735,
+  "p90": 0.909,
+  "applied": false,
+  "keys": [
+   "st_dlc_int",
+   "st_dlc_int_p10",
+   "st_dlc_int_p90"
+  ]
+ },
+ "caveat": "Describes Jaipur's current circle-rate table in the 27 offices that list urban rates, read 13 November 2026. Check your row on the portal; some rows labelled sq ft are in sq m. Circle rates are minimum values for stamp duty, not prices."
+}

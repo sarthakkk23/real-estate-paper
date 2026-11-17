@@ -1,0 +1,184 @@
+{
+ "built": "2026-11-17",
+ "window": "April 2024 to October 2026",
+ "base": "April",
+ "state": [
+  {
+   "month": 1,
+   "name": "January",
+   "pct": 7.104027022137993,
+   "lo95": 1.8416018834325198,
+   "hi95": 12.638375597124218,
+   "key": "st_reg_m1"
+  },
+  {
+   "month": 2,
+   "name": "February",
+   "pct": -0.9779395824695669,
+   "lo95": -6.645275624740643,
+   "hi95": 5.0334465122328975,
+   "key": "st_reg_m2"
+  },
+  {
+   "month": 3,
+   "name": "March",
+   "pct": -2.492490644376344,
+   "lo95": -7.783094386828948,
+   "hi95": 3.101641911730746,
+   "key": "st_reg_m3"
+  },
+  {
+   "month": 4,
+   "name": "April",
+   "pct": 0.0,
+   "lo95": null,
+   "hi95": null,
+   "key": null
+  },
+  {
+   "month": 5,
+   "name": "May",
+   "pct": 42.92569115953264,
+   "lo95": 35.48262188221931,
+   "hi95": 50.77766365629388,
+   "key": "st_reg_may"
+  },
+  {
+   "month": 6,
+   "name": "June",
+   "pct": 39.546458928685404,
+   "lo95": 30.667053535147893,
+   "hi95": 49.029259271521084,
+   "key": "st_reg_jun"
+  },
+  {
+   "month": 7,
+   "name": "July",
+   "pct": 41.38893427385495,
+   "lo95": 34.45301516401962,
+   "hi95": 48.68265104140364,
+   "key": "st_reg_jul"
+  },
+  {
+   "month": 8,
+   "name": "August",
+   "pct": 1.13623359679762,
+   "lo95": -4.081272844875727,
+   "hi95": 6.6375466972569575,
+   "key": "st_reg_m8"
+  },
+  {
+   "month": 9,
+   "name": "September",
+   "pct": -3.1816874374552273,
+   "lo95": -8.763387635026621,
+   "hi95": 2.7414916498730513,
+   "key": "st_reg_m9"
+  },
+  {
+   "month": 10,
+   "name": "October",
+   "pct": -8.922133699781732,
+   "lo95": -14.064586227896491,
+   "hi95": -3.4719521826142685,
+   "key": "st_reg_m10"
+  },
+  {
+   "month": 11,
+   "name": "November",
+   "pct": -3.166839737672822,
+   "lo95": -8.518056384979978,
+   "hi95": 2.497395178320483,
+   "key": "st_reg_m11"
+  },
+  {
+   "month": 12,
+   "name": "December",
+   "pct": 12.064152171640607,
+   "lo95": 6.819513870879934,
+   "hi95": 17.566292401674755,
+   "key": "st_reg_m12"
+  }
+ ],
+ "jaipur": [
+  {
+   "month": 1,
+   "name": "January",
+   "pct": 5.643704579922892,
+   "key": "st_reg_jai_m1"
+  },
+  {
+   "month": 2,
+   "name": "February",
+   "pct": 13.085157992257157,
+   "key": "st_reg_jai_m2"
+  },
+  {
+   "month": 3,
+   "name": "March",
+   "pct": 9.970720404910116,
+   "key": "st_reg_jai_m3"
+  },
+  {
+   "month": 4,
+   "name": "April",
+   "pct": 0.0,
+   "key": null
+  },
+  {
+   "month": 5,
+   "name": "May",
+   "pct": 11.37870980595903,
+   "key": "st_reg_jai_m5"
+  },
+  {
+   "month": 6,
+   "name": "June",
+   "pct": 7.645495581885631,
+   "key": "st_reg_jai_m6"
+  },
+  {
+   "month": 7,
+   "name": "July",
+   "pct": 29.666171152133856,
+   "key": "st_reg_jai_jul"
+  },
+  {
+   "month": 8,
+   "name": "August",
+   "pct": 4.7501452908343955,
+   "key": "st_reg_jai_m8"
+  },
+  {
+   "month": 9,
+   "name": "September",
+   "pct": 6.389077009601074,
+   "key": "st_reg_jai_m9"
+  },
+  {
+   "month": 10,
+   "name": "October",
+   "pct": 10.122564279645573,
+   "key": "st_reg_jai_m10"
+  },
+  {
+   "month": 11,
+   "name": "November",
+   "pct": -2.4660000226845336,
+   "key": "st_reg_jai_m11"
+  },
+  {
+   "month": 12,
+   "name": "December",
+   "pct": 16.372834613857744,
+   "key": "st_reg_jai_m12"
+  }
+ ],
+ "march_vs_other": {
+  "pct": -11.5,
+  "lo95": -14.5,
+  "hi95": -8.4,
+  "key": "st_reg_mar"
+ },
+ "caveat": "31 comparable months (April 2024 to October 2026), about 2.6 observations per district-month; sale deeds of every kind, not new homes."
+}

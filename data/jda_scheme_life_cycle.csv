@@ -1,0 +1,15 @@
+comparison,plots_compared,vs_36m_plus_pct,lo,hi,p,n,schemes
+Across schemes: a scheme's plots against other schemes' plots in the same zone and year,"first 12 months of the scheme's sales, against 36 months and later",-2.196547475145205,-13.504685073229206,10.589982057177805,0.7225810673775583,6596,458
+Across schemes: a scheme's plots against other schemes' plots in the same zone and year,"months 12 to 23, against 36 months and later",-20.6786038809752,-32.74554346191224,-6.446587986210206,0.0060358250557376696,6596,458
+Across schemes: a scheme's plots against other schemes' plots in the same zone and year,"months 24 to 35, against 36 months and later",-14.854112294544464,-28.601429214672002,1.5401584850749162,0.07337901449504351,6596,458
+Across schemes: a scheme's plots against other schemes' plots in the same zone and year,first 12 months against months 12 to 23,23.300215717455288,10.651500976349082,37.39482123446769,0.0001624501331315626,6596,458
+"Within a scheme: a scheme's plots against its own later plots, allowing for its zone's yearly trend","first 12 months of the scheme's sales, against 36 months and later",-1.9989898124741723,-12.402976110846186,9.64068836321188,0.7238239693362822,6596,458
+"Within a scheme: a scheme's plots against its own later plots, allowing for its zone's yearly trend","months 12 to 23, against 36 months and later",-1.2309412573765277,-9.896112474572949,8.267547969568811,0.7910652166084956,6596,458
+"Within a scheme: a scheme's plots against its own later plots, allowing for its zone's yearly trend","months 24 to 35, against 36 months and later",0.5906550047085624,-3.8290951918960703,5.213524760595356,0.7968554387369344,6596,458
+"Within a scheme: a scheme's plots against its own later plots, allowing for its zone's yearly trend",first 12 months against months 12 to 23,-0.7776206079872283,-7.075436655329426,5.9470200112289096,0.8151300221040929,6596,458
+"Within a scheme, residential plots only","first 12 months, against 36 months and later",11.394531042590227,-1.6037697723988553,26.109928373229696,0.08783586587278369,3686,170
+"Within a scheme, residential plots only",first 12 months against months 12 to 23,6.774835610945251,-0.4578598745978879,14.533056104497,0.06679622635692783,3686,170
+"Across schemes, residential plots only","first 12 months, against 36 months and later",-10.833188973295249,-21.40826272243135,1.1648356950284544,0.07476077187132064,3686,170
+"Within a scheme, sales from 2019 to 2026 only","first 12 months, against 36 months and later",4.778985970414618,-5.4836796419358125,16.15598088665584,0.37359012229245836,4956,318
+"Within a scheme, sales from 2019 to 2026 only",first 12 months against months 12 to 23,1.2504958917902487,-5.195987314686901,8.135327060070807,0.7103867731582071,4956,318
+"Across schemes, sales from 2019 to 2026 only","first 12 months, against 36 months and later",1.90778002468881,-11.777620716455361,17.71611368791801,0.7967027225962888,4956,318
